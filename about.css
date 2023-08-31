@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+Multani');
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #37b0d0, #0047ab);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grey-text {
+  color: #7B8185;
+}
+
+#saylor-link {
+  color: #2cbad9;
+}
+
+/* header */
+header {
+  font-family: Quicksand;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+ .logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.logo-link:hover {
+  transform: rotate(15deg);
+}
+
+nav {
+  margin-left: 0px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0; /* Remove default margin */
+  padding: 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #37b0d0;
+}
+
+.resume-button {
+  background-color: #37b0d0;
+  font-family: Rubik;
+  font-size: 16px;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #429feb;
+}
+
+/* about me section */
+.about-container {
+  height: 85vh;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Noto Sans Multani;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 0px; 
+  margin-bottom: 0px;
+}
+
+.hi-text{
+  font-family: Noto Sans Multani;
+}
+
+.about-text {
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 0px;
+  color: white;
+  width: 50%;
+}
+
+.about-image {
+  width: 380px;
+  height: 400px;
+  margin-right: 60px; /* Space between image and text */
+  border-radius: 10px;
+}
+
+/* footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  padding-bottom:0px;
+  padding-top:15px
+}
+
+footer a {
+  color: white;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: #37b0d0;
+}
+
+footer img {
+  width: 65px;
+  height: 50px;
+}
+
+footer img:hover {
+  transform: scale(1.09);
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer-note {
+  font-family: Noto Sans Multani;
+}
+
+/* Scroll in animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate {
+  animation: slideIn 0.5s ease-out forwards;
+}

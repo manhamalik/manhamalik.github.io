@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>Manha</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <!-- opening logo animation -->
+    <div class="opening-animation">
+  <div class="logo-opening">
+    <img class="logo" src="images/mk.png" alt="Logo">
+  </div>
+</div>
+    
+<!-- left corner logo -->
+<a href="/" class="logo-link">
+  <div class="logo-container">
+    <img class="logo logo-right" src="images/mk.png" alt="Logo">
+  </div>
+</a>
+
+<!-- header -->
+<nav>
+  <ul>
+    <li><a href="javascript:void(0);" data-section="experience">EXPERIENCE</a></li>
+    <li>|</li>
+    <li><a href="javascript:void(0);" data-section="projects">PROJECTS</a></li>
+    <li>|</li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li>|</li>
+    <li><a href="javascript:void(0);" data-section="contact">CONTACT</a></li>
+  </ul>
+</nav>
+<a href="https://drive.google.com/file/d/1SvmDLux5vXk2IneSZbp89wcr6vTaABu9/view?usp=drive_link" target="_blank" class="resume-button" style="text-decoration: none;">RESUME</a>
+</header>
+  
+  <!-- main container -->
+<div class="main-container">
+ <div class="content">
+    <div class="text-container">
+      <div>
+        <h1 class="typing-effect gradient-text"><span id="main-text"></span><span class="blinking-cursor" id="main-cursor"></span></h1>
+        <p class="typing-effect sub-heading" id="sub-text"><span id="second-text"></span><span class="blinking-cursor" id="second-cursor"></span></p>
+      </div>
+    </div>
+    <img src="images/art.png" alt="Image">
+  </div>
+</div>
+  
+  <!-- experience container -->
+<div class="container experience-container" id="experience">
+  <h2 class="experience-heading animate-on-scroll">My <span class="gradient-text">Experience</span></h2>
+</div>
+<p class="experience-text grey-text animate-on-scroll">A glimpse into the diverse roles and responsibilities that have shaped my journey.</p>
+  <div class="container experience-container">
+      <div class="experience-box-container animate-on-scroll">
+<!-- First experience box -->
+<div class="experience-box">
+  <img src="images/experience/e1.png" alt="Experience 1" class="experience-image-small">
+  <h3>Python Curriculum Developer</h3>
+  <p class="experience-company-date">OGAV | <span class="grey-text">June 2023 to Aug. 2023</span></p>
+  <p class="experience-description">● Developed a comprehensive Python curriculum across 3 levels with weekly deliverables.<br>● Sourced STEM grants to fund program expansion.<br>● Forged strategic partnerships to enhance program development.</p>
+</div>
+<!-- Second experience box -->
+<div class="experience-box">
+  <img src="images/experience/e2.png" alt="Experience 2" class="experience-image-small">
+  <h3>Customer Service Representative</h3>
+  <p class="experience-company-date">KGS Research | <span class="grey-text">Oct. 2022 to May 2023</span></p> <p class="experience-description">● Conducted insightful telephone surveys, gathering valuable client feedback.<br>● Achieved or exceeded performance targets, maintaining high efficiency.<br>● Accurately updated client data in the Brand database and scheduled calls promptly.</p>
+</div>
+<!-- Third experience box -->
+<div class="experience-box">
+  <img src="images/experience/e3.png" alt="Experience 3" class="experience-image-small">
+  <h3>Team Leader Volunteer</h3>
+  <p class="experience-company-date">Results Canada | <span class="grey-text">Feb. 2021 to March 2023</span></p>
+  <p class="experience-description">● Managed and led monthly meetings and campaign presentations for 25+ attendees.<br>● Managed communications, tasks, and content while amplifying social impact, engaging parliamentarians, and recruiting volunteers to aid poverty-stricken individuals.</p>
+</div>
+</div>
+</div>
+
+  <!-- projects container -->
+<div class="container projects-container" id="projects">
+  <h2 class="projects-heading animate-on-scroll">My <span class="gradient-text">Projects</span></h2>
+      <p class="projects-text animate-on-scroll">Delve into a collection of my projects that spotlight the fusion of my technical skills and creative innovation.</p>
+       <div class="search-wrapper animate-on-scroll">
+<div class="search-container">
+  <div class="search-bar">
+    <input type="text" id="searchBar" placeholder="Search by project name, language, or tool">
+    <img src="images/projects/searchicon.png" alt="Search" id="searchIcon">
+  </div>
+  <!-- dropdown and icon -->
+  <select id="sortDropdown" style="display: none;"> <!-- Hide the dropdown initially -->
+    <option value="title">Sort by Title</option>
+    <option value="language">Sort by Language</option>
+  </select>
+  <img src="images/projects/dropdown.png" alt="Dropdown" id="sortDropdownIcon">
+</div>
+</div>
+    <div class="project-list"></div>
+    <div class="image-button-container">
+    <button id="moreProjectsButton" class="image-button">
+  <img src="images/projects/more.png" alt="More Projects">
+</button>
+<button id="lessProjectsButton" class="image-button" style="display: none;">
+  <img src="images/projects/less.png" alt="Less Projects">
+</button>
+</div>
+  </div>
+
+<!-- Go Up button -->
+<div id="goUpButton" class="image-button" style="display: none;">
+  <img src="images/goup.png" alt="Go Up">
+</div>
+  
+  <!-- footer container -->
+<footer id="contact">
+    <a href="https://github.com/manhamalik?tab=repositories" target="_blank"><img src="images/footer/glogo.png" alt="GitHub"></a>
+    <a href="https://www.linkedin.com/in/manha-m-383460219/" target="_blank"><img src="images/footer/llogo.png" alt="LinkedIn"></a>
+    <a href="mailto:manha4512@gmail.com" target="_blank"><img src="images/footer/elogo.png" alt="Email"></a>
+    <p class="footer-note">© 2023 Manha Malik. All rights reserved. | Designed and created by Manha Malik.</p>
+</footer>
+
+  <!-- script -->
+<script src="index.js"></script>
+</body>
+</html>
