@@ -99,7 +99,7 @@ const projects = [
   {
     title: 'FlappyBird',
     image: 'images/projects/fb.png',
-    link: 'https://manhamalik.github.io/FlappyBird/',
+    link: 'https://manhamalik.github.io/Flappy-Bird/',
     tags: ['C#', 'JavaScript', 'HTML', 'CSS', 'Unity'],
     description: '● <b>Objective:</b> Recreate the classic Flappy Bird game for web-based enjoyment using Unity and C#.\n● Translated visual assets into sprites and employed C# scripting to enhance controls, animations, and obstacle interactions.'
   },
