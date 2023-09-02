@@ -55,11 +55,11 @@ function typeText(element, text, cursor, speed) {
 }
 
 setTimeout(() => {
-  // Hide the opening animation
+  // Hide opening animation
   const openingAnimation = document.querySelector(".opening-animation");
   openingAnimation.style.display = "none";
 
-  // Show the main content
+  // Show main content
   const mainContainer = document.querySelector(".main-container");
   mainContainer.style.display = "flex";
 
@@ -71,7 +71,7 @@ setTimeout(() => {
     secondCursor.style.display = "inline-block";
     typeText(subElement, subText, secondCursor, subHeadingTypingSpeed);
   }, mainText.length * 100);
-}, 2000); // Adjust the delay as needed
+}, 2000); // the delay
 
 // projects container
 const projects = [
@@ -79,6 +79,7 @@ const projects = [
     title: 'Algorithmic Applications',
     image: 'images/projects/aa.png',
     link: 'https://manhamalik.github.io/AlgorithmicApplications/',
+    githubLink: 'https://github.com/manhamalik/AlgorithmicApplications',
     tags: ['Python', 'HTML', 'CSS', 'Flask'],
     description: '● <b>Objective:</b> Construct diverse applications showcasing data structures and algorithms proficiency.\n● Utilized Python to create applications demonstrating data classes, arrays, stacks, queues, linked lists, binary search trees, hashing, and sorting.'
   },
@@ -86,6 +87,7 @@ const projects = [
     title: 'Carbon Impact',
     image: 'images/projects/ci.png',
     link: 'https://manhamalik.github.io/CarbonImpact/',
+    githubLink: 'https://github.com/manhamalik/CarbonImpact',
     tags: ['JavaScript', 'HTML', 'CSS', 'JQuery'],
     description: '● <b>Objective:</b> Promote eco-consciousness with live carbon footprint data and calculation tools.\n● Includes development of a real-time planetary statistics page and carbon footprint calculator.'
   },
@@ -93,13 +95,15 @@ const projects = [
     title: 'Dino Run',
     image: 'images/projects/dr.png',
     link: 'https://manhamalik.github.io/DinoRun/',
+    githubLink: 'https://github.com/manhamalik/DinoRun',
     tags: ['C#', 'JavaScript', 'HTML', 'CSS', 'Unity'],
     description: '● <b>Objective:</b> Recreate the classic offline Dino Game as a web-based version for entertainment using Unity and C#.\n● Utilized Unity and C# to replicate the game experience, converting images into sprites and incorporating C# for game mechanics.'
   },
   {
     title: 'FlappyBird',
     image: 'images/projects/fb.png',
-    link: 'https://manhamalik.github.io/Flappy-Bird/',
+    link: 'https://manhamalik.github.io/FlappyBird/',
+    githubLink: 'https://github.com/manhamalik/FlappyBird',
     tags: ['C#', 'JavaScript', 'HTML', 'CSS', 'Unity'],
     description: '● <b>Objective:</b> Recreate the classic Flappy Bird game for web-based enjoyment using Unity and C#.\n● Translated visual assets into sprites and employed C# scripting to enhance controls, animations, and obstacle interactions.'
   },
@@ -107,6 +111,7 @@ const projects = [
     title: 'GlobalGuideAI',
     image: 'images/projects/gga.png',
     link: 'https://globalguideai.mxnha77.repl.co/',
+    githubLink: 'https://github.com/manhamalik/GlobalGuideAI',
     tags: ['Python', 'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB', 'spaCy'],
     description: '● <b>Objective:</b> Simplified travel planning through an AI chatbot recommending activities based on user input.\n● Includes MongoDB integration for data storage and spaCy for natural language processing.'
   },
@@ -114,6 +119,7 @@ const projects = [
     title: 'HawkHub',
     image: 'images/projects/hh.png',
     link: 'https://manhamalik.github.io/HawkHub/',
+    githubLink: 'https://github.com/manhamalik/HawkHub',
     tags: ['JavaScript', 'HTML', 'CSS', 'Google Firebase', 'Google Cloud Console'],
     description: '● <b>Objective:</b> Unify Laurier students with a platform where they can discover and create events.\n● Includes Google sign-in authentication and a functional real-time database for up-to-date event information.'
   },
@@ -121,6 +127,7 @@ const projects = [
     title: 'Productify',
     image: 'images/projects/prod.png',
     link: 'https://manhamalik.github.io/Productify/',
+    githubLink: 'https://github.com/manhamalik/Productify',
     tags: ['JavaScript', 'HTML', 'CSS', 'Google Firebase'],
     description: '● <b>Objective:</b> Maximize productivity with effective tools and resources, beating procrastination.\n● Includes successful implementation of Google Sign-In authentication, feature-rich calendar and to-do list pages, and a curated collection of productive apps for enhanced productivity.'
   },
@@ -218,6 +225,18 @@ function createProjectBox(project) {
   arrowImage.alt = 'Arrow';
   arrowImage.classList.add('arrow-image');
   projectDetailsContainer.appendChild(arrowImage);
+
+  const githubLink = document.createElement('a');
+  githubLink.href = project.githubLink;
+  githubLink.target = '_blank';
+
+  const githubLogo = document.createElement('img');
+  githubLogo.src = 'images/ghi.png';
+  githubLogo.alt = 'GitHub';
+  githubLogo.classList.add('github-logo');
+
+  githubLink.appendChild(githubLogo);
+  projectBox.appendChild(githubLink);
 
   return projectBox;
 }
