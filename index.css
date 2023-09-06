@@ -397,12 +397,20 @@ img {
   font-family: Noto Sans Multani;
   display: flex;
   flex-direction: column; /* Stack child elements vertically */
-  justify-content: space-between; /* Distribute space evenly between child elements */
+  justify-content: center; /* Distribute space evenly between child elements */
   transition: transform 0.3s; /* hover speed */
   text-decoration: none; /* Remove underlines from links */
   cursor: pointer;
   color: black;
   position: relative;
+}
+
+/* project images */
+.project-box img:first-of-type:not(.github-logo):not(.arrow-image) {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .github-logo {
@@ -428,6 +436,7 @@ img {
   align-items: center;
   margin-top: auto;
 }
+
 .project-title {
   font-size: 18px;
   margin-bottom: 10px;
@@ -468,6 +477,7 @@ img {
   text-transform: uppercase;
 }
 
+/* down arrow button */
 .arrow-image {
   width: 35px;
   height: 35px;
