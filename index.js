@@ -134,7 +134,7 @@ const projects = [
   {
     title: 'CalcSwift',
     image: 'images/projects/casw.png',
-    link: 'manhamalik.com/CalcSwift/',
+    link: 'https://manhamalik.com/CalcSwift/',
     githubLink: 'https://github.com/manhamalik/CalcSwiftCode',
     tags: ['Swift', 'Objective-C', 'Xcode', 'iOS'],
     description: '● <b>Objective:</b> Create a sleek and efficient calculator app for iOS devices using Xcode.\n● Includes implementation of Swift and Objective-C for robust performance and a user-friendly interface.'
