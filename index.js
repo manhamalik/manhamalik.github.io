@@ -140,6 +140,14 @@ const projects = [
     tags: ['Swift', 'Objective-C', 'Xcode', 'iOS'],
     description: '● <b>Objective:</b> Create a sleek and efficient calculator app for iOS devices using Xcode.\n● Includes implementation of Swift and Objective-C for robust performance and a user-friendly interface.'
   },
+  {
+    title: 'EspressoExpress',
+    image: 'images/projects/ese.png',
+    link: 'https://manhamalik.github.io/EspressoExpress/',
+    githubLink: 'https://github.com/manhamalik/EspressoExpress',
+    tags: ['Swift', 'Objective-C', 'Xcode', 'iOS'],
+    description: '● <b>Objective:</b> Create an interactive menu app for a cafe company specializing in muffins, coffee, and cinnamon rolls.\n● Implements Swift and Objective-C to provide a user-friendly iOS experience.'
+  },
 ];
 
 const searchBar = document.getElementById('searchBar');
