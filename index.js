@@ -148,6 +148,14 @@ const projects = [
     tags: ['Swift', 'Objective-C', 'Xcode', 'iOS'],
     description: '● <b>Objective:</b> Create an interactive menu app for a cafe company specializing in muffins, coffee, and cinnamon rolls.\n● Implements Swift and Objective-C to provide a user-friendly iOS experience.'
   },
+    {
+    title: 'WeatherWorld',
+    image: 'images/projects/weawor.png',
+    link: 'https://manhamalik.github.io/WeatherWorld/',
+    githubLink: 'https://github.com/manhamalik/WeatherWorld',
+    tags: ['JavaScript', 'HTML', 'CSS', 'Fetch API', 'JSON', 'AJAX', 'REST API'],
+    description: '● <b>Objective:</b> Provide up-to-date weather information for a desired location based on user input.\n● Implements JavaScript, JSON, and REST API to fetch and display the latest weather data.'
+  },
 ];
 
 const searchBar = document.getElementById('searchBar');
