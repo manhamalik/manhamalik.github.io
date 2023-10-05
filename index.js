@@ -153,8 +153,8 @@ const projects = [
     image: 'images/projects/weawor.png',
     link: 'https://manhamalik.github.io/WeatherWorld/',
     githubLink: 'https://github.com/manhamalik/WeatherWorld',
-    tags: ['JavaScript', 'HTML', 'CSS', 'Fetch API', 'JSON', 'AJAX', 'REST API'],
-    description: '● <b>Objective:</b> Provide up-to-date weather information for a desired location based on user input.\n● Implements JavaScript, JSON, and REST API to fetch and display the latest weather data.'
+    tags: ['JavaScript', 'HTML', 'CSS', 'XML', 'JSON', 'AJAX', 'REST API', 'SOAP API'],
+    description: '● <b>Objective:</b> Provide up-to-date weather information for a desired location based on user input.\n● Implements JavaScript, JSON, and REST API to fetch and display the latest weather data.\n● Utilizes SOAP API and XML for additional data sources and functionality.'
   },
 ];
 
