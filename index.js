@@ -148,13 +148,21 @@ const projects = [
     tags: ['Swift', 'Objective-C', 'Xcode', 'iOS'],
     description: '● <b>Objective:</b> Create an interactive menu app for a cafe company specializing in muffins, coffee, and cinnamon rolls.\n● Implements Swift and Objective-C to provide a user-friendly iOS experience.'
   },
-    {
+  {
     title: 'WeatherWorld',
     image: 'images/projects/weawor.png',
     link: 'https://manhamalik.github.io/WeatherWorld/',
     githubLink: 'https://github.com/manhamalik/WeatherWorld',
     tags: ['JavaScript', 'HTML', 'CSS', 'XML', 'JSON', 'AJAX', 'REST API', 'SOAP API'],
     description: '● <b>Objective:</b> Provide up-to-date weather information for a desired location based on user input.\n● Implements JavaScript, JSON, and REST API to fetch and display the latest weather data.\n● Utilizes SOAP API and XML for additional data sources and functionality.'
+  },
+  {
+      title: 'FitnessAssistance',
+    image: 'images/projects/fitna.png',
+    link: 'https://manhamalik.github.io/FitnessAssistance/',
+    githubLink: 'https://github.com/manhamalik/FitnessAssistanceCode',
+    tags: ['Java', 'Java Swing', 'GUI'],
+    description: '● <b>Objective:</b> Develop a fitness tracking application with a clean and intuitive interface.\n● Implementation of Java and Java Swing for performance and user-friendly fitness tracking.'
   },
 ];
 
