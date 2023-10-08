@@ -164,6 +164,14 @@ const projects = [
     tags: ['Java', 'Java Swing', 'GUI'],
     description: '● <b>Objective:</b> Develop a fitness tracking application with a clean and intuitive interface.\n● Implementation of Java and Java Swing for performance and user-friendly fitness tracking.'
   },
+  {
+      title: 'ClimateConnect',
+    image: 'images/projects/clco.png',
+    link: 'https://cc-climateconnect.netlify.app/',
+    githubLink: 'https://github.com/manhamalik/ClimateConnect',
+    tags: ['JavaScript', 'HTML', 'CSS', 'React.js', 'Node.js', 'JSON', 'AJAX', 'REST API'],
+    description: '● <b>Objective:</b> Deliver up-to-date weather information for a desired location, allowing users to explore climate data with ease.\n● Utilizes JavaScript, React.js, Node.js, and a REST API for real-time weather updates.'
+  },
 ];
 
 const searchBar = document.getElementById('searchBar');
