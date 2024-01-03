@@ -111,7 +111,8 @@ const projects = [
     title: 'GlobalGuideAI',
     image: 'images/projects/gga.png',
     // link: 'https://globalguideai.netlify.app/',
-    link: 'https://globalguideai.mxnha77.repl.co/',
+    // link: 'https://globalguideai.mxnha77.repl.co/',
+    link: 'https://462a56cd-0abc-481e-9e74-3e624f7a2354-00-1etmomb060m8a.global.replit.dev/',
     githubLink: 'https://github.com/manhamalik/GlobalGuideAI',
     tags: ['Python', 'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB', 'spaCy'],
     description: '● <b>Objective:</b> Simplified travel planning through an AI chatbot recommending activities based on user input.\n● Includes MongoDB integration for data storage and spaCy for natural language processing.'
