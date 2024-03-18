@@ -223,6 +223,7 @@ img {
   box-sizing: border-box;
   /* flex-wrap: wrap; */ /* for boxes to go to next line */
   margin: 0 auto; /* Center horizontally */
+   width: 100%; 
 }
 
 .experience-box {
