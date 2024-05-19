@@ -81,7 +81,7 @@ const projects = [
     link: 'https://manhamalik.github.io/AlgorithmicApplications/',
     githubLink: 'https://github.com/manhamalik/AlgorithmicApplications',
     tags: ['Python', 'HTML', 'CSS', 'Flask'],
-    description: '● <b>Objective:</b> Construct diverse applications showcasing data structures and algorithms proficiency.\n● Utilized Python to create applications demonstrating data classes, arrays, stacks, queues, linked lists, binary search trees, hashing, and sorting.'
+    description: '● Developed a project website featuring multiple applications, each utilizing a specific data structure for various functions.\n● Includes a Personal Finance Tracker using sorting, and an Event Scheduler using binary search trees.'
   },
   {
     title: 'Carbon Impact',
@@ -89,7 +89,7 @@ const projects = [
     link: 'https://manhamalik.github.io/CarbonImpact/',
     githubLink: 'https://github.com/manhamalik/CarbonImpact',
     tags: ['JavaScript', 'HTML', 'CSS', 'JQuery'],
-    description: '● <b>Objective:</b> Promote eco-consciousness with live carbon footprint data and calculation tools.\n● Includes development of a real-time planetary statistics page and carbon footprint calculator.'
+    description: '● Crafted eco-awareness site with JavaScript, HTML, CSS, and JQuery, featuring a carbon footprint calculator.\n● Integrated live carbon footprint data and real-time planetary statistics for impact awareness.'
   },
   {
     title: 'Dino Run',
@@ -97,7 +97,7 @@ const projects = [
     link: 'https://manhamalik.github.io/DinoRun/',
     githubLink: 'https://github.com/manhamalik/DinoRun',
     tags: ['C#', 'JavaScript', 'HTML', 'CSS', 'Unity'],
-    description: '● <b>Objective:</b> Recreate the classic offline Dino Game as a web-based version for entertainment using Unity and C#.\n● Utilized Unity and C# to replicate the game experience, converting images into sprites and incorporating C# for game mechanics.'
+    description: '● Recreated classic offline Dino Run game Dino Run as a web-based version using Unity.\n● Transformed visuals into sprites and used C# to enhance controls, animations, and obstacles.'
   },
   {
     title: 'FlappyBird',
@@ -105,17 +105,15 @@ const projects = [
     link: 'https://manhamalik.github.io/FlappyBird/',
     githubLink: 'https://github.com/manhamalik/FlappyBird',
     tags: ['C#', 'JavaScript', 'HTML', 'CSS', 'Unity'],
-    description: '● <b>Objective:</b> Recreate the classic Flappy Bird game for web-based enjoyment using Unity and C#.\n● Translated visual assets into sprites and employed C# scripting to enhance controls, animations, and obstacle interactions.'
+    description: '● Adapted the beloved Flappy Bird gameplay into an engaging web-based experience using Unity and C#.\n● Used sprites and C# to refine gameplay mechanics for an immersive experience.'
   },
   {
     title: 'GlobalGuideAI',
     image: 'images/projects/gga.png',
-    // link: 'https://globalguideai.netlify.app/',
-    // link: 'https://globalguideai.mxnha77.repl.co/',
-    link: 'https://462a56cd-0abc-481e-9e74-3e624f7a2354-00-1etmomb060m8a.global.replit.dev/',
-    githubLink: 'https://github.com/manhamalik/GlobalGuideAI',
+    link: 'https://manhamalik.com/GlobalGuideAI/',
+    githubLink: 'https://github.com/manhamalik/GlobalGuideAICode',
     tags: ['Python', 'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB', 'spaCy'],
-    description: '● <b>Objective:</b> Simplified travel planning through an AI chatbot recommending activities based on user input.\n● Includes MongoDB integration for data storage and spaCy for natural language processing.'
+    description: '● Streamlined travel planning with a Python AI chatbot for personalized travel recommendations.\n● Optimized user engagement with MongoDB data storage and spaCy natural language processing integration.'
   },
   {
     title: 'HawkHub',
@@ -123,7 +121,7 @@ const projects = [
     link: 'https://manhamalik.github.io/HawkHub/',
     githubLink: 'https://github.com/manhamalik/HawkHub',
     tags: ['JavaScript', 'HTML', 'CSS', 'Google Firebase', 'Google Cloud Console'],
-    description: '● <b>Objective:</b> Unify Laurier students with a platform where they can discover and create events.\n● Includes Google sign-in authentication and a functional real-time database for up-to-date event information.'
+    description: '● Developed a Laurier students event platform using JavaScript, HTML, and CSS, integrating Google Firebase for security and real-time updates, alongside Maps and Calendar for efficient event management.'
   },
   {
     title: 'Productify',
@@ -131,7 +129,7 @@ const projects = [
     link: 'https://manhamalik.github.io/Productify/',
     githubLink: 'https://github.com/manhamalik/Productify',
     tags: ['JavaScript', 'HTML', 'CSS', 'Google Firebase'],
-    description: '● <b>Objective:</b> Maximize productivity with effective tools and resources, beating procrastination.\n● Includes successful implementation of Google Sign-In authentication, feature-rich calendar and to-do list pages, and a curated collection of productive apps for enhanced productivity.'
+    description: '● Maximized productivity with effective tools and resources, beating procrastination.\n● Includes successful implementation of Google Sign-In authentication, feature-rich calendar and to-do list pages, and a curated collection of productive apps for enhanced productivity.'
   },
   {
     title: 'CalcSwift',
@@ -139,7 +137,7 @@ const projects = [
     link: 'https://manhamalik.github.io/CalcSwift/',
     githubLink: 'https://github.com/manhamalik/CalcSwiftCode',
     tags: ['Swift', 'Objective-C', 'Xcode', 'iOS'],
-    description: '● <b>Objective:</b> Create a sleek and efficient calculator app for iOS devices using Xcode.\n● Includes implementation of Swift and Objective-C for robust performance and a user-friendly interface.'
+    description: '● Created a sleek and efficient calculator app for iOS devices using Xcode.\n● Implements Swift and Objective-C for robust performance and a user-friendly interface.'
   },
   {
     title: 'EspressoExpress',
@@ -147,7 +145,7 @@ const projects = [
     link: 'https://manhamalik.github.io/EspressoExpress/',
     githubLink: 'https://github.com/manhamalik/EspressoExpress',
     tags: ['Swift', 'Objective-C', 'Xcode', 'iOS'],
-    description: '● <b>Objective:</b> Create an interactive menu app for a cafe company specializing in muffins, coffee, and cinnamon rolls.\n● Implements Swift and Objective-C to provide a user-friendly iOS experience.'
+    description: '● Developed an interactive menu app for a cafe specializing in baked goods and coffee.\n● Implements Swift, Objective-C and storyboards to provide a user-friendly iOS experience.'
   },
   {
     title: 'WeatherWorld',
@@ -155,7 +153,7 @@ const projects = [
     link: 'https://manhamalik.github.io/WeatherWorld/',
     githubLink: 'https://github.com/manhamalik/WeatherWorld',
     tags: ['JavaScript', 'HTML', 'CSS', 'XML', 'JSON', 'AJAX', 'REST API', 'SOAP API'],
-    description: '● <b>Objective:</b> Provide up-to-date weather information for a desired location based on user input.\n● Implements JavaScript, JSON, and REST API to fetch and display the latest weather data.\n● Utilizes SOAP API and XML for additional data sources and functionality.'
+    description: '● Developed using JavaScript, HTML, CSS, and multiple APIs for comprehensive weather data retrieval.\n● Delivered real-time weather updates and intuitive exploration features seamlessly integrated for user convenience.'
   },
   {
       title: 'FitnessAssistance',
@@ -163,7 +161,7 @@ const projects = [
     link: 'https://manhamalik.github.io/FitnessAssistance/',
     githubLink: 'https://github.com/manhamalik/FitnessAssistanceCode',
     tags: ['Java', 'Java Swing', 'GUI'],
-    description: '● <b>Objective:</b> Develop a fitness tracking application with a clean and intuitive interface.\n● Implementation of Java and Java Swing for performance and user-friendly fitness tracking.'
+    description: '● Engineered a Java Swing-based application for precise fitness metric tracking through dynamic calculations.\n● Designed an intuitive interface delivering personalized, motivational feedback to enhance user engagement.'
   },
   {
       title: 'ClimateConnect',
@@ -171,7 +169,7 @@ const projects = [
     link: 'https://cc-climateconnect.netlify.app/',
     githubLink: 'https://github.com/manhamalik/ClimateConnect',
     tags: ['JavaScript', 'HTML', 'CSS', 'React.js', 'Node.js', 'JSON', 'AJAX', 'REST API'],
-    description: '● <b>Objective:</b> Deliver up-to-date weather information for a desired location, allowing users to explore climate data with ease.\n● Utilizes JavaScript, React.js, Node.js, and a REST API for real-time weather updates.'
+    description: '● Developed a dynamic web application providing real-time weather insights tailored to user-specified locations.\n● Built with JavaScript, ReactJS, NodeJS, and REST API for seamless user experience and weather data retrieval.'
   },
 ];
 
