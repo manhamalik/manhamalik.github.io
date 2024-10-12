@@ -555,3 +555,13 @@ footer img:hover {
   width: 3.9vw;
   height: 3.9vw;
 }
+
+/* Gold star for featured projects */
+.gold-star {
+  position: absolute;
+  top: 0.45vw;
+  right: 0.45vw;
+  font-size: 2vw;
+  color: #efd006;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}

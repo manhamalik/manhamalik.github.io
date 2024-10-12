@@ -96,8 +96,25 @@ const projects = [
     image: 'images/projects/dr.png',
     link: 'https://manhamalik.github.io/DinoRun/',
     githubLink: 'https://github.com/manhamalik/DinoRun',
-    tags: ['C#', 'JavaScript', 'HTML', 'CSS', 'Unity'],
+    tags: ['C#', 'Unity'],
     description: '● Recreated classic offline Dino Run game Dino Run as a web-based version using Unity.\n● Transformed visuals into sprites and used C# to enhance controls, animations, and obstacles.'
+  },
+  {
+    title: 'My Portfolio',
+    image: 'images/projects/mpp.png',
+    link: 'https://manhamalik.com/',
+    githubLink: 'https://github.com/manhamalik/manhamalik.github.io',
+    tags: ['JavaScript', 'HTML', 'CSS', 'Figma'],
+    description: '● Designed and developed a responsive portfolio with dedicated sections for Experience, Projects, About, and Contact, using HTML, CSS, and JavaScript.\n● Custom UI/UX design created in Figma, hosted on GitHub Pages, and maintained with version control through GitHub.'
+  },
+  {
+    title: 'Discover Lincoln',
+    image: 'images/projects/dl.png',
+    link: 'https://manhamalik.com/Discover-Lincoln/',
+    githubLink: 'https://github.com/manhamalik/DiscoverLincolnCode',
+    tags: ['JavaScript', 'HTML', 'CSS', 'React', 'Figma', 'Next.js', 'Strapi CMS', 'Leaflet.js', 'Node.js'],
+    description: '● Built a tourism platform with interactive maps, user authentication, and content management through Strapi CMS.\n● Developed LincolnGuessr, inspired by GeoGuessr, allowing users to explore the Town of Lincoln’s landmarks through a gamified map experience with Leaflet.js.',
+    featured:true
   },
   {
     title: 'FlappyBird',
@@ -156,7 +173,7 @@ const projects = [
     description: '● Developed using JavaScript, HTML, CSS, and multiple APIs for comprehensive weather data retrieval.\n● Delivered real-time weather updates and intuitive exploration features seamlessly integrated for user convenience.'
   },
   {
-      title: 'FitnessAssistance',
+    title: 'FitnessAssistance',
     image: 'images/projects/fitna.png',
     link: 'https://manhamalik.github.io/FitnessAssistance/',
     githubLink: 'https://github.com/manhamalik/FitnessAssistanceCode',
@@ -164,7 +181,7 @@ const projects = [
     description: '● Engineered a Java Swing-based application for precise fitness metric tracking through dynamic calculations.\n● Designed an intuitive interface delivering personalized, motivational feedback to enhance user engagement.'
   },
   {
-      title: 'ClimateConnect',
+    title: 'ClimateConnect',
     image: 'images/projects/clco.png',
     link: 'https://cc-climateconnect.netlify.app/',
     githubLink: 'https://github.com/manhamalik/ClimateConnect',
@@ -183,6 +200,7 @@ const projectsPerPage = 6;
 let displayedProjects = projectsPerPage;
 let filteredProjects = projects; // Initialize with all projects
 
+// Function to update project visibility and button state
 function updateProjects() {
   const searchTerm = searchBar.value.toLowerCase();
   const sortOption = sortDropdown.value;
@@ -194,11 +212,13 @@ function updateProjects() {
     );
   });
 
-  if (sortOption === 'title') {
-    filteredProjects.sort((a, b) => a.title.localeCompare(b.title));
-  } else if (sortOption === 'language') {
-    filteredProjects.sort((a, b) => a.tags[0][0].localeCompare(b.tags[0][0]));
-  }
+  // Sort projects: featured projects at the top
+  filteredProjects.sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    if (sortOption === 'title') return a.title.localeCompare(b.title);
+    return 0;
+  });
 
   const visibleProjects = filteredProjects.slice(0, displayedProjects);
   const hiddenProjects = filteredProjects.slice(displayedProjects);
@@ -212,19 +232,36 @@ function updateProjects() {
     projectList.appendChild(projectBox);
   });
 
-  // Show or hide the "More Projects" button based on the number of remaining projects
-  if (hiddenProjects.length === 0) {
-    moreProjectsButton.style.display = 'none';
-  } else {
+  // Update the visibility of the "More Projects" and "Less Projects" buttons
+  if (hiddenProjects.length > 0) {
     moreProjectsButton.style.display = 'block';
+    lessProjectsButton.style.display = 'none';
+  } else {
+    moreProjectsButton.style.display = 'none';
+    lessProjectsButton.style.display = 'block';
+  }
+
+  // Show the "Less Projects" button only when all projects are displayed
+  if (displayedProjects >= filteredProjects.length) {
+    lessProjectsButton.style.display = 'block';
+  } else {
+    lessProjectsButton.style.display = 'none';
   }
 }
 
+// Modify the project box creation function
 function createProjectBox(project) {
   const projectBox = document.createElement('a');
   projectBox.href = project.link;
   projectBox.target = '_blank';
   projectBox.classList.add('project-box');
+
+  if (project.featured) {
+    const starIcon = document.createElement('i');
+    starIcon.classList.add('fas', 'fa-star', 'gold-star'); // Font Awesome star icon
+    starIcon.setAttribute('title', 'Featured'); 
+    projectBox.appendChild(starIcon);
+  }
 
   const projectImage = document.createElement('img');
   projectImage.src = project.image;
@@ -285,24 +322,26 @@ searchBar.addEventListener('input', updateProjects);
 sortDropdown.addEventListener('change', updateProjects);
 
 moreProjectsButton.addEventListener('click', () => {
-  // Increment the number of displayed projects
-  displayedProjects += projectsPerPage;
-  updateProjects();
+  // Check if there are more projects to display
+  if (displayedProjects < filteredProjects.length) {
+    displayedProjects += projectsPerPage; // Increment by projects per page
+    updateProjects();
+  }
 
-  // Show the "Less Projects" button when "More Projects" is clicked
-  lessProjectsButton.style.display = 'block';
+  // Show "Less Projects" button when all projects are displayed
+  if (displayedProjects >= filteredProjects.length) {
+    lessProjectsButton.style.display = 'block';
+  }
 });
 
 lessProjectsButton.addEventListener('click', () => {
-  // Decrement the number of displayed projects
-  displayedProjects -= projectsPerPage;
+  // Reset to show the initial number of projects
+  displayedProjects = projectsPerPage;
   updateProjects();
 
-  // Hide the "Less Projects" button when reverting to the original state
+  // Hide the "Less Projects" button after resetting
   lessProjectsButton.style.display = 'none';
-
-  // Scroll to the top of the projects container
-  document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  moreProjectsButton.style.display = 'block';
 });
 
 // Initial projects update
