@@ -105,14 +105,14 @@ const projects = [
     link: 'https://manhamalik.com/',
     githubLink: 'https://github.com/manhamalik/manhamalik.github.io',
     tags: ['JavaScript', 'HTML', 'CSS', 'Figma'],
-    description: '● Designed and developed a responsive portfolio with dedicated sections for Experience, Projects, About, and Contact, using HTML, CSS, and JavaScript.\n● Custom UI/UX design created in Figma, hosted on GitHub Pages, and maintained with version control through GitHub.'
+    description: '● Designed and developed a responsive portfolio (this website!) with dedicated sections for Experience, Projects, About, and Contact, using HTML, CSS, and JavaScript.\n● Custom UI/UX design created in Figma, hosted on GitHub Pages, and maintained with version control through GitHub.'
   },
   {
     title: 'Discover Lincoln',
     image: 'images/projects/dl.png',
     link: 'https://manhamalik.com/Discover-Lincoln/',
     githubLink: 'https://github.com/manhamalik/DiscoverLincolnCode',
-    tags: ['JavaScript', 'HTML', 'CSS', 'React', 'Figma', 'Next.js', 'Strapi CMS', 'Leaflet.js', 'Node.js'],
+    tags: ['JavaScript', 'HTML', 'CSS', 'React', 'Next.js', 'Strapi CMS', 'Leaflet.js', 'Node.js', 'Figma', 'Adobe'],
     description: '● Built a tourism platform with interactive maps, user authentication, and content management through Strapi CMS.\n● Developed LincolnGuessr, inspired by GeoGuessr, allowing users to explore the Town of Lincoln’s landmarks through a gamified map experience with Leaflet.js.',
     featured:true
   },
@@ -126,11 +126,12 @@ const projects = [
   },
   {
     title: 'GlobalGuideAI',
-    image: 'images/projects/gga.png',
+    image: 'images/projects/ggs.png',
     link: 'https://manhamalik.com/GlobalGuideAI/',
     githubLink: 'https://github.com/manhamalik/GlobalGuideAICode',
-    tags: ['Python', 'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB', 'spaCy'],
-    description: '● Streamlined travel planning with a Python AI chatbot for personalized travel recommendations.\n● Optimized user engagement with MongoDB data storage and spaCy natural language processing integration.'
+    tags: ['Python', 'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB', 'spaCy', 'Figma', 'Adobe'],
+    description: '● Streamlined travel planning with a Python AI chatbot for personalized travel recommendations.\n● Optimized user engagement with MongoDB data storage and spaCy natural language processing integration.',
+    featured: true
   },
   {
     title: 'HawkHub',

@@ -565,3 +565,18 @@ footer img:hover {
   color: #efd006;
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #37b0d0;
+  border-radius: 20px;
+}

@@ -186,3 +186,18 @@ footer img:hover {
 .animate {
   animation: slideIn 0.5s ease-out forwards;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #37b0d0;
+  border-radius: 20px;
+}
