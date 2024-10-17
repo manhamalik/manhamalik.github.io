@@ -243,7 +243,8 @@ footer img:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  /* background: #1a1a1a; */
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
