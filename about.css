@@ -22,7 +22,6 @@ body {
   color: #2cbad9;
 }
 
-/* header */
 header {
   font-family: Quicksand;
   background-color: black;
@@ -30,28 +29,60 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 10px 20px; */
   padding: 1.7vh 1.6vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  /* width: 50px; */
   width: 4vw;
   height: auto;
-  /* margin-left: 5px; */
   margin-left: 0.4vw;
   cursor: pointer;
 }
-
  .logo-link {
   display: inline-block;
   transition: transform 0.3s ease;
-  transform-origin: center;
+  transform-origin: center; /* origin for rotation */
 }
 
 .logo-link:hover {
   transform: rotate(15deg);
 }
+
+/* opening animation */
+.opening-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+@keyframes logo-opening {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0);
+    opacity: 0;
+  }
+}
+
+.logo-opening {
+  animation: logo-opening 3s ease-in-out;
+}   
 
 nav {
   margin-left: 0;
@@ -61,7 +92,7 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  margin: 0; /* Remove default margin */
+  margin: 0;
   padding: 0;
   font-size: 1.20vw;
 }
@@ -81,24 +112,42 @@ nav a:hover {
   color: #37b0d0;
 }
 
+nav a.active {
+  color: #37b0d0;
+}
+
 .resume-button {
   background-color: #37b0d0;
   font-family: Rubik;
-  /* font-size: 16px; */
   font-size: 1.25vw;
   color: black;
-  /* padding: 10px 20px; */
   padding: 0.8% 1.7%;
   border: none;
-  /* border-radius: 5px; */
   border-radius: 0.4vw;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .resume-button:hover {
   background-color: #429feb;
 }
+
+.resume-link {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.divider {
+  color: white;
+}
+
 
 /* about me section */
 .about-container {
@@ -200,4 +249,70 @@ footer img:hover {
 ::-webkit-scrollbar-thumb {
   background-color: #37b0d0;
   border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    z-index: 9998;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  nav ul.active {
+    height: 100vh; /* expand to full height when active */
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav li {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    z-index: 10000;
+  }
+
+  .resume-button {
+    display: none;
+  }
+
+  .resume-link {
+    display: block;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #37b0d0;
+  }
+
+  .logo {
+    width: 8vw;
+    z-index: 10001;
+    position: relative;
+  }
 }

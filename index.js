@@ -1,34 +1,96 @@
-// script to remove the hashtags when clicking the header buttons
-document.addEventListener('DOMContentLoaded', function() {
-// Smooth scrolling for navigation links
-const navLinks = document.querySelectorAll('nav a[data-section]');
-navLinks.forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    const targetSection = document.getElementById(this.dataset.section);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
+window.addEventListener('load', function() {
+  // Get the navbar height to use for scroll offset
+  const navbarHeight = document.querySelector('header').offsetHeight;
+
+  // Smooth scrolling for navigation links
+  const navLinks = document.querySelectorAll('nav a[data-section]');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const targetSection = document.getElementById(this.dataset.section);
+      if (targetSection) {
+        // Scroll to the section with an offset to account for the navbar
+        const targetPosition = targetSection.offsetTop - navbarHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+
+        // Update URL without reloading the page
+        updateURL(this.dataset.section);
+      }
+    });
+  });
+
+  // Update URL function
+  const updateURL = function(sectionId) {
+    const stateObj = { sectionId };
+    history.pushState(stateObj, '', `#${sectionId}`);
+  };
+
+  // Handle back/forward navigation
+  window.addEventListener('popstate', function(event) {
+    const sectionId = event.state ? event.state.sectionId : '';
+    if (sectionId) {
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        // Scroll to the section with an offset
+        const targetPosition = targetSection.offsetTop - navbarHeight;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
+  });
+
+  // Handle direct page loads or navigation with a hash in the URL (like #projects, #experience, etc.)
+  const hash = window.location.hash;
+  if (hash) {
+    // Timeout to delay the default browser scroll behavior
+    setTimeout(() => {
+      const targetSection = document.querySelector(hash);
+      if (targetSection) {
+        // Calculate the offset position
+        const targetPosition = targetSection.offsetTop - navbarHeight;
+
+        // Scroll to the section with smooth behavior
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 0); // delay so that the browser doesn't scroll to the section prematurely
+  }
+});
+
+// Hamburger and dropdown menu handling
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+const links = document.querySelectorAll('#nav-links li a'); // Select all the links in the dropdown
+
+// Toggle dropdown when hamburger is clicked
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  
+  // Toggle between hamburger and X icon
+  const icon = hamburger.querySelector('i');
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-times');
+});
+
+// Close dropdown when any link is clicked
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    
+    // Reset hamburger icon to bars
+    const icon = hamburger.querySelector('i');
+    icon.classList.add('fa-bars');
+    icon.classList.remove('fa-times');
   });
 });
 
-// Update URL without reloading the page
-const updateURL = function(sectionId) {
-  const stateObj = { sectionId };
-  history.pushState(stateObj, '', `#${sectionId}`);
-};
-
-// Handle back/forward navigation
-window.addEventListener('popstate', function(event) {
-  const sectionId = event.state ? event.state.sectionId : '';
-  if (sectionId) {
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-});
-});
 
 // script content for main container
 const mainText = "Hello, I'm Manha.";

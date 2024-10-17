@@ -26,6 +26,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.7vh 1.6vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -34,7 +37,6 @@ header {
   margin-left: 0.4vw;
   cursor: pointer;
 }
-
  .logo-link {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -86,7 +88,7 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  margin: 0; /* Remove default margin */
+  margin: 0;
   padding: 0;
   font-size: 1.20vw;
 }
@@ -106,6 +108,10 @@ nav a:hover {
   color: #37b0d0;
 }
 
+nav a.active {
+  color: #37b0d0;
+}
+
 .resume-button {
   background-color: #37b0d0;
   font-family: Rubik;
@@ -116,11 +122,28 @@ nav a:hover {
   border-radius: 0.4vw;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .resume-button:hover {
   background-color: #429feb;
 }
+
+.resume-link {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.divider {
+  color: white;
+}
+
 
 /* title page container */
 .main-container {
@@ -221,9 +244,8 @@ img {
   gap: 1.7vw; /* gap between boxes */
   padding: 3vw 0.75vw;
   box-sizing: border-box;
-  /* flex-wrap: wrap; */ /* for boxes to go to next line */
   margin: 0 auto; /* Center horizontally */
-   width: 100%; 
+  width: 100%; 
 }
 
 .experience-box {
@@ -315,7 +337,7 @@ img {
   margin-bottom: 0.4vw;
 }
 
-/* Additional styles for the search bar and dropdown */
+/* styles for the search bar and dropdown */
 .search-container {
   display: flex;
   align-items: center;
@@ -548,7 +570,7 @@ footer img:hover {
   position: fixed;
   bottom: 1.6vw;
   right: 1.6vw;
-  z-index: 1000; /* Ensure it's above other content */
+  z-index: 997;
 }
 
 #goUpButton img {
@@ -573,10 +595,85 @@ footer img:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  /* background: #1a1a1a; */
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #37b0d0;
   border-radius: 20px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: black;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    z-index: 9998;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+
+  nav ul.active {
+    height: 100vh; /* expand to full height when active */
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav li {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    z-index: 10000;
+  }
+
+  .resume-button {
+    display: none;
+  }
+
+  .resume-link {
+    display: block;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #37b0d0;
+  }
+
+  .logo {
+    width: 8vw;
+    z-index: 10001;
+    position: relative;
+  }
 }
