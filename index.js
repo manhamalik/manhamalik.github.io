@@ -166,7 +166,7 @@ const projects = [
     image: 'images/projects/mpp.png',
     link: 'https://manhamalik.com/Portfolio/',
     githubLink: 'https://github.com/manhamalik/manhamalik.github.io',
-    tags: ['JavaScript', 'HTML', 'CSS', 'Figma', 'Adobe'],
+    tags: ['JavaScript', 'HTML', 'CSS', 'Figma'],
     description: '● Developed a responsive portfolio website with JavaScript, HTML, and CSS, featuring dynamic animations, interactive project galleries, and seamless navigation.\n● Designed and prototyped the user interface in Figma, ensuring an intuitive user experience across devices with smooth transitions and easy access to key information.',
     featured: true
   },
@@ -175,7 +175,7 @@ const projects = [
     image: 'images/projects/dl.png',
     link: 'https://manhamalik.com/Discover-Lincoln/',
     githubLink: 'https://github.com/manhamalik/DiscoverLincolnCode',
-    tags: ['JavaScript', 'HTML', 'CSS', 'React', 'Next.js', 'Strapi CMS', 'Leaflet.js', 'Node.js', 'Figma', 'Adobe'],
+    tags: ['JavaScript', 'HTML', 'CSS', 'React', 'Figma', 'Next.js', 'Strapi CMS', 'Leaflet.js', 'Node.js'],
     description: '● Built a tourism platform with interactive maps, user authentication, and Strapi CMS, using Figma for design and prototyping.\n● Developed LincolnGuessr, inspired by GeoGuessr, allowing users to explore the Town of Lincoln’s landmarks through a gamified map experience with Leaflet.js.',
     featured:true
   },
@@ -192,7 +192,7 @@ const projects = [
     image: 'images/projects/ggs.png',
     link: 'https://manhamalik.com/GlobalGuideAI/',
     githubLink: 'https://github.com/manhamalik/GlobalGuideAICode',
-    tags: ['Python', 'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB', 'spaCy', 'Figma', 'Adobe'],
+    tags: ['Python', 'JavaScript', 'HTML', 'CSS', 'Flask', 'MongoDB', 'spaCy', 'Figma'],
     description: '● Developed an AI-powered travel assistant using Python, Flask, MongoDB, and spaCy for natural language processing to deliver personalized travel recommendations.\n● Designed and prototyped the user experience with Figma, creating a responsive interface that integrates real-time data retrieval and a chatbot for seamless user interactions.',
     featured: true
   },
