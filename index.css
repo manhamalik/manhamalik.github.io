@@ -727,8 +727,10 @@ header {
 
 @media (max-width: 768px) {
   .experience-container {
+    display: flex;
     flex-direction: column;
     padding: 2vw;
+    width: 100%;
   }
 
   .experience-heading {
@@ -742,8 +744,10 @@ header {
   }
 
   .experience-box-container {
+    display: flex;
     flex-direction: column;
     gap: 4vw;
+    width: 100%;
   }
 
   .experience-box {
@@ -751,9 +755,11 @@ header {
     padding: 4vw;
     margin-bottom: 4vw;
     text-align: center;
+    background-color: #222;
+    color: white;
+    display: block;
   }
 
-  /* gradient on top of boxes */
   .experience-box::before {
     height: 1.5vw;
   }
