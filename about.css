@@ -316,7 +316,7 @@ footer img:hover {
     z-index: 10001;
     position: relative;
   }
-  
+
   .about-content {
     flex-direction: column;
     padding: 4%;
@@ -330,7 +330,7 @@ footer img:hover {
 
   .about-image {
     width: 80%;
-    height: auto;
+    height: 46%;
     margin: 0 auto 20px auto;
     border-radius: 10px;
   }
