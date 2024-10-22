@@ -725,7 +725,6 @@ header {
   }
 }
 
-/* Consolidated Mobile styles for the experience section */
 @media (max-width: 768px) {
   .experience-container {
     display: flex;
@@ -759,6 +758,11 @@ header {
     text-align: center;
     background-color: #222;
     color: white;
+  }
+
+   /* gradient on top of boxes */
+   .experience-box::before {
+    height: 1.5vw;
   }
 
   .experience-box h3 {
