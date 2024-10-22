@@ -363,14 +363,17 @@ img {
   border-radius: 1.6vw;
   padding: 0.4vw 0.8vw;
   border: 0.2vw solid grey;
-  width: 100%; /* Full width within the .search-bar container */
+  width: 100%;
   margin-right: 0.75vw;
+  text-align: center;
+  font-family: Noto Sans Multani;
+  font-size: 1.03vw;
+  position: relative;
 }
 
 #searchBar::placeholder {
   color: grey;
-  font-family: Noto Sans Multani;
-  font-size: 1.03vw;
+  text-align: left;
 }
 
 #searchIcon {
@@ -378,8 +381,8 @@ img {
   height: 1.6vw;
   cursor: pointer;
   position: absolute;
-  right: 1.35vw; /* icon's position on search bar */
-  top: 1.17vw;
+  right: 1.5vw;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -463,12 +466,6 @@ img {
   align-items: center;
   margin-top: auto;
 }
-
-/* .project-title {
-  font-size: 1.55vw;
-  margin-bottom: 0.8vw;
-  font-family: Noto Sans Multani;
-} */
 
 .project-description {
   font-size: 1.25vw;
