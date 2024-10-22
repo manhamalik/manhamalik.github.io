@@ -680,6 +680,7 @@ header {
 
 @media (max-width: 768px) {
   .main-container {
+    min-height: calc(100vh - 3.4vh);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -696,12 +697,14 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
   }
 
   .text-container {
     padding-right: 0;
     height: auto;
     margin-top: 0rem;
+    min-height: 30vh;
   }
 
   .typing-effect {
@@ -718,5 +721,6 @@ header {
     height: auto;
     margin-bottom: 0rem;
     max-width: 80vw;
+    flex-shrink: 0;
   }
 }
