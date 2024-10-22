@@ -725,7 +725,7 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .experience-container {
     display: flex;
     flex-direction: column;
@@ -787,4 +787,4 @@ header {
     margin-left: auto;
     margin-right: auto;
   }
-}
+} */
