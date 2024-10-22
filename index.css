@@ -731,7 +731,7 @@ header {
     flex-direction: column;
     padding: 2vw;
     width: 100%;
-    /* opacity: 1; */
+    opacity: 1;
   }
 
   .experience-heading {
