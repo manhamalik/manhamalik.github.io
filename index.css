@@ -144,7 +144,6 @@ nav a.active {
   color: white;
 }
 
-
 /* title page container */
 .main-container {
   font-family: Rubik;
@@ -328,6 +327,12 @@ img {
   margin-top: 0.4vw;
   font-family: Rubik;
   margin-bottom: 0.4vw;
+}
+
+.project-box h3 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin-bottom: 1vw; 
 }
 
 .projects-text {
@@ -531,7 +536,7 @@ img {
   height: 3.9vw;
 }
 
-/* footer */
+/* footer section*/
 footer {
   background-color: black;
   color: white;
@@ -784,5 +789,143 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-container {
+    padding: 5vw;
+    border-radius: 3vw;
+    min-height: auto;
+  }
+
+  .projects-heading {
+    font-size: 10vw;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+  }
+
+  .projects-text {
+    font-size: 5vw;
+    margin-bottom: 4vw;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 90vw;
+    margin-top: 3vw;
+  }
+
+  #searchBar {
+    padding: 2.5vw;
+    font-size: 3vw;
+    border-radius: 3vw;
+    margin-right: 2vw;
+    width: 100%;
+  }
+
+  #searchIcon {
+    width: 5vw;
+    height: auto;
+    right: 4vw;
+  }
+
+  #sortDropdownIcon {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  #sortDropdown {
+    padding: 1.5vw;
+    font-size: 3vw;
+    border-radius: 3vw;
+    width: 25%;
+  }
+
+  .project-list {
+    flex-direction: column;
+  }
+
+  .project-box {
+    flex: 1 1 90vw;
+    max-width: 90vw;
+    margin: 3vw auto;
+    padding: 5vw;
+    font-size: 3vw;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.1);
+    border-radius: 3vw;
+  }
+
+  .project-box h3 {
+    font-size: 5vw;
+  }
+
+  .project-box img:first-of-type:not(.github-logo):not(.arrow-image) {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-description {
+    font-size: 3.5vw;
+    margin-bottom: 4vw;
+  }
+
+  .project-tags-container {
+    margin-top: 3vw;
+  }
+
+  .project-tag {
+    font-size: 3vw;
+    padding: 1.5vw;
+    border-radius: 2.5vw;
+    margin: 1vw;
+  }
+
+  .github-logo {
+    width: 7vw;
+    height: 7vw;
+    bottom: 4.9vw;
+    right: 5vw;
+  }
+
+  .image-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4vw;
+  }
+
+  .image-button img {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .view-project-text {
+    font-size: 3vw;
+  }
+
+  .arrow-image {
+    width: 7vw;
+    height: 7vw;
+    margin-left: 2vw;
+  }
+
+  #sortDropdown {
+    font-size: 3vw;
+    padding: 2vw;
+    width: 25%;
+  }
+
+  #sortDropdownIcon {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .gold-star {
+    top: 2vw;
+    right: 2vw;
+    font-size: 5vw;
   }
 }
