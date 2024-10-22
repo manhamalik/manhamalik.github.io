@@ -725,12 +725,14 @@ header {
   }
 }
 
+/* Consolidated Mobile styles for the experience section */
 @media (max-width: 768px) {
   .experience-container {
     display: flex;
     flex-direction: column;
     padding: 2vw;
     width: 100%;
+    opacity: 1; /* Ensure visibility */
   }
 
   .experience-heading {
@@ -753,15 +755,10 @@ header {
   .experience-box {
     width: 90vw;
     padding: 4vw;
-    margin-bottom: 4vw;
+    margin: 2vw auto;
     text-align: center;
     background-color: #222;
     color: white;
-    display: block;
-  }
-
-  .experience-box::before {
-    height: 1.5vw;
   }
 
   .experience-box h3 {
