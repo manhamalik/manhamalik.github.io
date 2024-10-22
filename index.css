@@ -678,7 +678,7 @@ header {
     z-index: 10001;
     position: relative;
   }
-  
+
   .main-container {
     min-height: calc(100vh - 3.4vh);
     display: flex;
@@ -931,11 +931,7 @@ header {
   footer img {
     width: 13vw;
   }
-
-  footer a {
-    margin: 0 0.39vw;
-  }
-
+  
   .footer-note {
     font-family: Noto Sans Multani;
     font-size: 4vw;
