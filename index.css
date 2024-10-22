@@ -680,7 +680,6 @@ header {
 
 @media (max-width: 768px) {
   .main-container {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
