@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Or your specific branch to deploy from
+      - main 
 
 jobs:
   build-and-deploy:
@@ -21,9 +21,13 @@ jobs:
         echo "const EMAILJS_SERVICE_ID='${{ secrets.EMAILJS_SERVICE_ID }}';" >> ./config.js
         echo "const EMAILJS_TEMPLATE_ID='${{ secrets.EMAILJS_TEMPLATE_ID }}';" >> ./config.js
 
+    # Display generated config.js (for debugging)
+    - name: Display generated config.js
+      run: cat ./config.js
+
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # Use your root directory for static files
+        publish_dir: ./  # Use root directory for static files
