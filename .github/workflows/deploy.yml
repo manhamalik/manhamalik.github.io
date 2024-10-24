@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    # Inject environment variables into config.js
+    # Inject environment variables into config.js in the root directory
     - name: Inject environment variables into JavaScript
       run: |
         echo "const RECAPTCHA_SITE_KEY='${{ secrets.RECAPTCHA_SITE_KEY }}';" > ./config.js
@@ -25,9 +25,9 @@ jobs:
     - name: Display generated config.js
       run: cat ./config.js
 
-    # Deploy to GitHub Pages
+    # Deploy to GitHub Pages from the root directory
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # Use root directory for static files
+        publish_dir: ./  # Root directory for static files
