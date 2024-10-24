@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <title>Manha</title>
+  <link rel="stylesheet" href="contact.css">
+   <!-- EmailJS SDK -->
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+   </script>
+   <script type="text/javascript">
+     (function(){
+       emailjs.init({
+         publicKey: EMAILJS_PUBLIC_KEY, 
+       });
+     })();
+   </script>
+</head>
+<body>
+<header>
+  <!-- left corner logo -->
+  <a href="/" class="logo-link">
+    <div class="logo-container">
+      <img class="logo logo-right" src="images/mk.png" alt="Logo">
+    </div>
+  </a>
+
+  <!-- Hamburger icon -->
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <ul id="nav-links">
+      <li><a href="/#experience" data-section="experience">EXPERIENCE</a></li>
+      <li class="divider">|</li>
+      <li><a href="/#projects" data-section="projects">PROJECTS</a></li>
+      <li class="divider">|</li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li class="divider">|</li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <!-- Resume link inside dropdown -->
+      <li class="resume-link"><a href="https://drive.google.com/file/d/1hFVT8jH8Emd2C1UJfSYc14GEn-lO0K6o/view?usp=sharing" target="_blank">RESUME</a></li>
+    </ul>
+  </nav>
+
+  <a href="https://drive.google.com/file/d/1hFVT8jH8Emd2C1UJfSYc14GEn-lO0K6o/view?usp=sharing" target="_blank" class="resume-button">RESUME</a>
+</header>
+
+  <!-- contact call to action -->
+  <div class="container" id="contact">
+    <h2 class="contact-heading animate-on-scroll">Let's <span class="gradient-text">Connect</span></h2>
+  </div>
+  <p class="contact-text grey-text animate-on-scroll">Have a project, opportunity, or question in mind? I'd love to hear from you! Feel free to get in touch, and I'll get back to you as soon as possible.</p>
+  </div>
+  </div>
+
+<!-- contact inputs Section -->
+<!-- Contact Section -->
+<div class="contact-content">
+  <img src="images/connect.jpg" alt="Image" class="contact-image">
+  <div class="form-container">
+    <form id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Name*" required>
+      <input type="email" id="email" name="email" placeholder="Email Address*" required
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        oninvalid="this.setCustomValidity('Please enter a valid email address')"
+        oninput="setCustomValidity('')">
+      
+      <div id="subject-container" style="position: relative;">
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Subject*</option>
+          <option value="Question">Question</option>
+          <option value="Project">Project</option>
+          <option value="Opportunity">Opportunity</option>
+          <option value="Other">Other</option>
+        </select>
+        
+        <!-- Input for custom "Other" subject -->
+        <input type="text" id="other-input" name="other-subject" placeholder="Type in subject*" style="display: none;"/>
+      </div>
+    
+      <textarea id="message" name="message" placeholder="Message*" rows="5" required></textarea>
+    
+      <!-- reCAPTCHA -->
+      <div class="g-recaptcha" 
+      data-size="invisible" 
+      data-callback="onSubmit"></div>
+
+      <script src="config.js"></script>
+ 
+      <script>
+        // Dynamically set the reCAPTCHA site key using the value from config.js
+        document.querySelector('.g-recaptcha').setAttribute('data-sitekey', RECAPTCHA_SITE_KEY);
+      </script>
+      
+      <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i></button>
+    </form>    
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <a href="https://github.com/manhamalik?tab=repositories" target="_blank"><img src="images/footer/glogo.png" alt="GitHub"></a>
+    <a href="https://www.linkedin.com/in/manha-m/" target="_blank"><img src="images/footer/llogo.png" alt="LinkedIn"></a>
+    <a href="mailto:info@manhamalik.com" target="_blank"><img src="images/footer/elogo.png" alt="Email"></a>
+    <p class="footer-note">© 2024 Manha Malik. All rights reserved. | Designed and created by Manha Malik.</p>
+    
+  <!-- script -->
+  <script src="contact.js"></script>
+</body>
+
+</footer>
+</html>

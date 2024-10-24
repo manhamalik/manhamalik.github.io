@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Or your specific branch to deploy from
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Inject environment variables into config.js
+    - name: Inject environment variables into JavaScript
+      run: |
+        echo "const RECAPTCHA_SITE_KEY='${{ secrets.RECAPTCHA_SITE_KEY }}';" > ./config.js
+        echo "const EMAILJS_PUBLIC_KEY='${{ secrets.EMAILJS_PUBLIC_KEY }}';" >> ./config.js
+        echo "const EMAILJS_SERVICE_ID='${{ secrets.EMAILJS_SERVICE_ID }}';" >> ./config.js
+        echo "const EMAILJS_TEMPLATE_ID='${{ secrets.EMAILJS_TEMPLATE_ID }}';" >> ./config.js
+
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./  # Use your root directory for static files
