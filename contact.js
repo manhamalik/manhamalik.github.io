@@ -57,7 +57,7 @@ function onSubmit(token) {
     message: document.getElementById('message').value,
     'g-recaptcha-response': token
   };
- 
+//  test
   emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
     .then(function(response) {
       console.log('EmailJS response:', response);
