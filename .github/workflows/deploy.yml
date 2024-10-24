@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Inject environment variables into config.js in the root directory
+    # Inject environment variables into config.js (if you still need this)
     - name: Inject environment variables into JavaScript
       run: |
         echo "const RECAPTCHA_SITE_KEY='${{ secrets.RECAPTCHA_SITE_KEY }}';" > ./config.js
