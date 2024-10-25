@@ -65,7 +65,7 @@ function onSubmit(token) {
       const contactContent = document.querySelector('.contact-content');
       contactContent.innerHTML = `
         <div class="thank-you-message">
-          <img src="images/check.png" class="check-image" alt="Check Mark" style="width: 12.5vw; height: auto;">
+          <img src="../images/check.png" class="check-image" alt="Check Mark" style="width: 12.5vw; height: auto;">
           <h1>THANK YOU</h1>
           <p>I will get back to you as soon as possible!</p>
           <button class="send-another-message" onclick="resetForm()">Send another message</button>
