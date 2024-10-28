@@ -252,6 +252,15 @@ const projects = [
     tags: ['JavaScript', 'HTML', 'CSS', 'React.js', 'Node.js', 'JSON', 'AJAX', 'REST API'],
     description: '● Developed a dynamic web application providing real-time weather insights tailored to user-specified locations.\n● Built with JavaScript, ReactJS, NodeJS, and REST API for seamless user experience and weather data retrieval.'
   },
+  {
+    title: 'BrainTumourDetectionAI',
+    image: 'images/projects/bttd.png',
+    link: 'https://manhamalik.com/BrainTumourDetectionAI/',
+    githubLink: 'https://github.com/manhamalik/Brain_Tumour_Detection_AI',
+    tags: ['Python', 'TensorFlow', 'Keras', 'NumPy', 'Pandas', 'Matplotlib', 'OpenCV', 'Google Colab', 'Gradio'],
+    description: '● Developed and trained convolutional neural network (CNN) models using Python, TensorFlow, and Keras for brain tumor detection from MRI scans, achieving up to 99% accuracy.\n● Leveraged transfer learning with pre-trained models (VGG16, InceptionV3, ResNet50) and integrated Gradio to create a real-time testing interface, enhancing deployment and accessibility across diverse datasets.', 
+    featured: true
+  },
 ];
 
 const searchBar = document.getElementById('searchBar');
