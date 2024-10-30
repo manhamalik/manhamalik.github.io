@@ -258,7 +258,16 @@ const projects = [
     link: 'https://manhamalik.com/BrainTumourDetectionAI/',
     githubLink: 'https://github.com/manhamalik/Brain_Tumour_Detection_AI',
     tags: ['Python', 'TensorFlow', 'Keras', 'NumPy', 'Pandas', 'Matplotlib', 'OpenCV', 'Google Colab', 'Gradio'],
-    description: '● Developed and trained convolutional neural network (CNN) models using Python, TensorFlow, and Keras for brain tumor detection from MRI scans, achieving up to 99% accuracy.\n● Leveraged transfer learning with pre-trained models (VGG16, InceptionV3, ResNet50) and integrated Gradio to create a real-time testing interface, enhancing deployment and accessibility across diverse datasets.', 
+    description: '● Developed and trained convolutional neural network (CNN) models using Python, TensorFlow, and Keras for brain tumour detection from MRI scans, achieving up to 99% accuracy.\n● Leveraged transfer learning with pre-trained models (VGG16, InceptionV3, ResNet50) and integrated Gradio to create a real-time testing interface, enhancing deployment and accessibility across diverse datasets.', 
+    featured: true
+  },
+  {
+    title: 'AutoRentNexus',
+    image: 'images/projects/arnv.png',
+    link: 'https://manhamalik.com/AutoRentNexus/',
+    githubLink: 'https://github.com/manhamalik/AutoRentNexusCode',
+    tags: ['Java', 'JUnit', 'Maven', 'Lucidchart'],
+    description: '● Developed a Java-based car rental management system that automates vehicle management, bookings, and customer profiles, enhancing operational efficiency for rental agencies.\n● Implemented real-time vehicle availability tracking and cost calculation algorithms; integrated JUnit for automated testing and Maven for build automation to ensure reliability and maintainability.', 
     featured: true
   },
 ];
