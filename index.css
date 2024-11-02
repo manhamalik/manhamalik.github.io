@@ -126,7 +126,9 @@ nav a.active {
 }
 
 .resume-button:hover {
-  background-color: #429feb;
+  background-color: #000000;
+  border: 1px solid #37b0d0;
+  color: #37b0d0;
 }
 
 .resume-link {
