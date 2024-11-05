@@ -69,3 +69,18 @@ links.forEach(link => {
     }
   });
 });
+
+// resume link variable
+const resumeLink = "https://drive.google.com/file/d/1D3OVY26GyRY0vB_O5ef_qHy2QTKZ1RZ5/view?usp=sharing";
+
+// Function to update all resume links
+function updateResumeLinks() {
+  const resumeElements = document.querySelectorAll(".resume-link, .resume-button");
+
+  resumeElements.forEach(element => {
+    element.setAttribute("href", resumeLink);
+  });
+}
+
+// Call the function to update links
+document.addEventListener("DOMContentLoaded", updateResumeLinks);
