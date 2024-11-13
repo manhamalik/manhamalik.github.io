@@ -471,10 +471,97 @@ updateProjects();
     });
   }, observerOptions);
 
-  const elementsToAnimate = document.querySelectorAll('.experience-container, .experience-text, .projects-heading, .projects-text, .search-wrapper');
-  elementsToAnimate.forEach(element => {
-    observer.observe(element);
+  const elementsToAnimate = document.querySelectorAll('.experience-container, .experience-text, .projects-heading, .projects-text, .search-wrapper, .community-container, .community-text');
+elementsToAnimate.forEach(element => {
+  observer.observe(element);
+});
+
+// community involvement carousel
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.next-button');
+  const prevButton = document.querySelector('.prev-button');
+  
+  let currentSlide = 0;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
+
+  function updateSlidePosition() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = 'translateX(' + (-slideWidth * currentSlide) + 'px)';
+  }
+
+  function moveToSlide(slideIndex) {
+    // Wrap around if out of bounds
+    if (slideIndex < 0) {
+      currentSlide = slides.length - 1; // Go to last slide
+    } else if (slideIndex >= slides.length) {
+      currentSlide = 0; // Go to first slide
+    } else {
+      currentSlide = slideIndex;
+    }
+    updateSlidePosition();
+  }
+
+  nextButton.addEventListener('click', () => {
+    moveToSlide(currentSlide + 1);
   });
+
+  prevButton.addEventListener('click', () => {
+    moveToSlide(currentSlide - 1);
+  });
+
+  window.addEventListener('resize', updateSlidePosition);
+
+  // Drag events for mouse and touch
+  track.addEventListener('mousedown', dragStart);
+  track.addEventListener('touchstart', dragStart);
+  track.addEventListener('mousemove', dragMove);
+  track.addEventListener('touchmove', dragMove);
+  track.addEventListener('mouseup', dragEnd);
+  track.addEventListener('touchend', dragEnd);
+  track.addEventListener('mouseleave', dragEnd);
+
+  function dragStart(event) {
+    isDragging = true;
+    startX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    currentTranslate = prevTranslate;
+    track.classList.add('dragging');
+  }
+
+  function dragMove(event) {
+    if (isDragging) {
+      const currentX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+      const deltaX = currentX - startX;
+      currentTranslate = prevTranslate + deltaX;
+      track.style.transform = `translateX(${currentTranslate}px)`;
+    }
+  }
+
+  function dragEnd() {
+    if (isDragging) {
+      isDragging = false;
+      track.classList.remove('dragging'); // Remove dragging class
+
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const movedBy = currentTranslate - prevTranslate;
+      
+      if (movedBy < -100 && currentSlide < slides.length - 1) {
+        currentSlide++;
+      } else if (movedBy > 100 && currentSlide > 0) {
+        currentSlide--;
+      } else if (movedBy < -100 && currentSlide === slides.length - 1) {
+        currentSlide = 0; // Wrap around to first slide
+      } else if (movedBy > 100 && currentSlide === 0) {
+        currentSlide = slides.length - 1; // Wrap around to last slide
+      }
+
+      moveToSlide(currentSlide);
+      prevTranslate = -slideWidth * currentSlide; // Update previous translate for smooth dragging
+    }
+  }
 
 // go up button
 const goUpButton = document.getElementById('goUpButton'); //reference to "Go Up" button

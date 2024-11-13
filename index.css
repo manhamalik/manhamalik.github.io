@@ -295,7 +295,192 @@ img {
   font-size: 1.25vw;
 }
 
-/* Scroll in animation for experience and projects*/
+/* Community involvement section */
+.community-background-container {
+  position: relative;
+  padding: 2vw;
+  overflow: hidden;
+  padding-bottom: 4vw;
+}
+
+.community-background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/community/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.community-container {
+  font-family: Noto Sans Multani;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.8vw;
+  opacity: 0;
+  margin-top: 1vw; 
+}
+
+.community-heading {
+  font-size: 3.9vw;
+  text-align: center;
+  margin: 1.67vw auto; 
+  font-family: Rubik;
+  margin-bottom: 0.3vw;
+}
+
+.community-text {
+  font-family: Noto Sans Multani;
+  text-align: center;
+  font-size: 1.6vw;
+  margin-bottom: 3vw;
+  color: #7B8185;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.7vw;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0.5vw;
+  cursor: pointer;
+  font-size: 1.5vw;
+  z-index: 1;
+}
+
+.prev-button {
+  left: -3vw;
+}
+
+.next-button {
+  right: -3vw;
+}
+
+.community-box {
+  perspective: 1000px;
+  width: 100%;
+  height: 15vw;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  border-radius: 0.4vw;
+  background-color: #222;
+  box-sizing: border-box;
+}
+
+.community-box:hover {
+  transform: rotateY(180deg);
+}
+
+.community-front, .community-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4vw;
+  padding: 1.55vw;
+  box-sizing: border-box;
+  background-color: #222;
+}
+
+.community-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Noto Sans Multani;
+  color: white;
+  text-align: center;
+}
+
+.community-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Noto Sans Multani;
+}
+
+/* Gradient on top of boxes */
+.community-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5vw;
+  background: linear-gradient(to right, #37b0d0, #0047ab, #37b0d0);
+  z-index: 2;
+}
+
+.community-image-small {
+  display: block;
+  width: 11vw;
+  margin-right: 1.5vw; /* Space between image and text content */
+  border-radius: 25px;
+  flex-shrink: 0; 
+}
+
+.community-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.community-box h3 {
+  margin: 0;
+  font-size: 2vw;
+}
+
+.community-company-role {
+  margin: 0.25vw;
+  font-size: 1.6vw;
+  color: white;
+}
+
+.community-date {
+  margin: 0.5vw;
+  font-size: 1.3vw;
+  color: white;
+}
+
+.community-points {
+  margin: 0;
+  font-size: 1.2vw;
+  color: white;
+}
+
+/* Scroll in animation */
 @keyframes slideIn {
   0% {
     opacity: 0;
