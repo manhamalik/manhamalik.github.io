@@ -133,6 +133,7 @@ function typeText(element, text, cursor, speed) {
 window.addEventListener('load', function () {
   const openingAnimation = document.querySelector(".opening-animation");
   const mainContainer = document.querySelector(".main-container");
+  const cookieBanner = document.getElementById("cookieConsentBanner");
   let animationPlaying = true; // Ensure it stops only once
 
   // Function to stop the opening animation
@@ -145,6 +146,9 @@ window.addEventListener('load', function () {
 
       // Show the main content
       mainContainer.style.display = "flex";
+
+      // Show the cookie banner
+      cookieBanner.style.display = "flex";
 
       // Start typing animations
       mainCursor.style.display = "inline-block";
@@ -162,6 +166,7 @@ window.addEventListener('load', function () {
   setTimeout(stopOpeningAnimation, 2000); // Stops after the delay
   window.addEventListener('scroll', stopOpeningAnimation); // Stops on scroll
 });
+
 
 // projects container
 const projects = [
@@ -698,4 +703,35 @@ window.addEventListener('scroll', toggleGoUpButton);
 // Smooth scrolling function when the button is clicked
 goUpButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+// cookie banner + privacy policy modal
+function closeModal() {
+  document.querySelector('.modal').style.display = 'none';
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Close the Cookie Consent Banner when the "X" is clicked
+  document.getElementById("closeBanner").addEventListener("click", function() {
+    document.getElementById("cookieConsentBanner").style.display = "none";
+  });
+
+  // Show Privacy Policy Modal when "Privacy Policy" button is clicked
+  document.getElementById("acceptCookies").addEventListener("click", function() {
+    document.getElementById("privacyModal").style.display = "block";
+  });
+
+  // Close the Privacy Policy Modal when the modal "X" is clicked
+  document.getElementById("closeModal").addEventListener("click", function() {
+    document.getElementById("privacyModal").style.display = "none";
+  });
+
+  // Close Modal When Clicking Outside Content
+  window.addEventListener("click", function(event) {
+    const modal = document.getElementById("privacyModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
 });

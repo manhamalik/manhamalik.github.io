@@ -22,6 +22,10 @@ body {
   color: #2cbad9;
 }
 
+#saylor-link:hover {
+  color: #00aaff;;
+}
+
 header {
   font-family: Quicksand;
   background-color: black;
