@@ -1378,3 +1378,148 @@ header {
     height: 10vw;
   }
 }
+
+@media (max-width: 768px) {
+  /* Community involvement section */
+  .community-background-container {
+    width: 100vw;
+    /* height: 100vh; */
+  }
+
+  .community-container {
+    /* margin-bottom: 1.8vw; */
+    margin-top: 3vw; 
+  }
+
+  .community-heading {
+    font-size: 7vw;
+  }
+
+  .community-text {
+    font-size: 5vw;
+    margin-top: 1vw;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Default carousel-slide layout (centered) */
+  .carousel-slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .carousel-button {
+    font-size: 10vw;
+  }
+
+  .community-box {
+    margin-left: 6vw;
+    width: 87%;
+    height: 28vw;
+    position: relative;
+    justify-content: center;
+  }
+
+  /* Gradient on top of boxes */
+  .community-box::before {
+    height: 1.5vw;
+  }
+
+  .community-front, .community-back {
+    padding: 0vw;
+  }
+
+  .community-image-small {
+    width: 18vw;
+    margin-right: 2vw; /* Space between image and text content */
+    margin-left: 1.5vw;
+  }
+
+  .community-box h3 {
+    font-size: 4.25vw;
+  }
+
+  .community-company-role {
+    font-size: 3.75vw;
+  }
+
+  .community-date {
+    font-size: 3.2vw;
+  }
+
+  .community-points {
+    font-size: 2.5vw;
+  }
+
+  /* Certification section */
+  .certification-heading {
+    font-size: 7vw;
+    margin: 1.67vw auto;
+    margin-bottom: 0.3vw;
+  }
+
+  .certification-text {
+    margin-top: 1vw;
+    font-size: 4vw;
+    margin-bottom: 2vw;
+  }
+
+  .certificate-card {
+    width: 87%;
+    height: 100%;
+  }
+
+  .certificate-logo img {
+    width: 100%;
+    display: block;
+  }
+
+  .certificate-title {
+    font-size: 3.6vw;
+    margin: 16px 0 12px;
+  }
+
+  .certificate-tags {
+    gap: 1vw;
+  }
+
+  .tag {
+    padding: 6px 12px;
+    font-size: 3vw;
+  }
+
+  .certificate-date {
+    font-size: 3vw;
+  }
+
+  .external-link-icon {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .carousel-certification-slide {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1.35vw;
+    justify-content: center;
+    align-items: start;
+    padding-top: 20px;
+    padding-right: 10px;
+  }
+
+  .carousel-certification-button {
+    top: 50%;
+    padding: 0.5vw;
+    font-size: 10vw;
+  }
+}
