@@ -1003,12 +1003,11 @@ footer img:hover {
 #goUpButton img {
   width: 3.9vw;
   height: 3.9vw;
-  transition: none; /* Disable any transitions */
+  transition: filter 0.3s ease; /* Smooth transition for the filter effect */
 }
 
 #goUpButton img:hover {
-  transform: none;
-  filter: none;
+  filter: saturate(3) hue-rotate(-10deg); /* Apply saturation and hue rotation on hover */
 }
 
 /* Gold star for featured projects */
@@ -1383,11 +1382,9 @@ header {
   /* Community involvement section */
   .community-background-container {
     width: 100vw;
-    /* height: 100vh; */
   }
 
   .community-container {
-    /* margin-bottom: 1.8vw; */
     margin-top: 3vw; 
   }
 
