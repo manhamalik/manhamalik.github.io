@@ -334,11 +334,11 @@ footer img:hover {
   .about-text {
     width: 100%;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 4.75vw;
   }
 
   .about-image {
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: 0 auto 20px auto;
     border-radius: 10px;
