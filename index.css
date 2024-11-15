@@ -1052,7 +1052,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    /* width: 100vw; */
     height: 0;
     justify-content: center;
     align-items: center;
@@ -1122,7 +1122,7 @@ header {
   .content {
     flex-direction: column-reverse;
     height: auto;
-    max-width: 100vw;
+    /* max-width: 100vw; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1381,7 +1381,7 @@ header {
 @media (max-width: 768px) {
   /* Community involvement section */
   .community-background-container {
-    width: 100vw;
+    /* width: 100vw; */
   }
 
   .community-container {
@@ -1441,11 +1441,11 @@ header {
   }
 
   .community-box h3 {
-    font-size: 4.25vw;
+    font-size: 4vw;
   }
 
   .community-company-role {
-    font-size: 3.75vw;
+    font-size: 3.5vw;
   }
 
   .community-date {
