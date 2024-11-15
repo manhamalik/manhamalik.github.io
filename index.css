@@ -398,6 +398,7 @@ img {
   border-radius: 0.4vw;
   background-color: #222;
   box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .community-box:hover {
@@ -479,6 +480,208 @@ img {
   font-size: 1.2vw;
   color: white;
 }
+
+/* Certification section */
+.certificate-card {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Noto Sans Multani', sans-serif;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-2%);
+}
+
+.certificate-logo {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.certificate-logo img {
+  width: 100%;
+  display: block;
+}
+
+.certificate-content {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.certificate-title {
+  font-size: 1.27em;
+  font-weight: bold;
+  color: black;
+  margin: 16px 0 12px;
+  text-align: left;
+}
+
+.certificate-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4vw;
+  justify-content: left;
+  margin-bottom: 16px;
+}
+
+.tag {
+  background-color: #F0ECEC;
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 1em;
+  color: black;
+}
+
+.certificate-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.certificate-date {
+  font-size: 1em;
+  color: #777;
+  margin: 0;
+}
+
+.external-link-icon {
+  width: 2vw;
+  height: 2vw;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.external-link-icon:hover {
+  opacity: 1;
+}
+
+.certification-background-container {
+  position: relative;
+  padding: 2vw;
+  /* overflow: hidden; */
+  padding-bottom: 4vw;
+}
+
+.certification-background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/community/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: -2;
+}
+
+.certification-background-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 236, 236, 0.85);
+  z-index: -1;
+}
+
+.certification-container {
+  font-family: Noto Sans Multani;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.8vw;
+  opacity: 0;
+  margin-top: 1vw;
+}
+
+.certification-heading {
+  font-size: 3.9vw;
+  text-align: center;
+  margin: 1.67vw auto;
+  font-family: Rubik;
+  margin-bottom: 0.3vw;
+  color: black;
+}
+
+.certification-text {
+  font-family: Noto Sans Multani;
+  text-align: center;
+  font-size: 1.6vw;
+  margin-bottom: 3vw;
+  color: black;
+}
+
+.carousel-certification-container {
+  position: relative;
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.carousel-track-certification-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-certification-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel-certification-slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-right:10px;
+}
+
+.carousel-certification-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 0.5vw;
+  cursor: pointer;
+  font-size: 1.5vw;
+  z-index: 1;
+}
+
+.prev-button {
+  left: -3vw;
+}
+
+.next-button {
+  right: -3vw;
+}
+
 
 /* Scroll in animation */
 @keyframes slideIn {
@@ -625,6 +828,7 @@ img {
   color: black;
   position: relative;
   font-size: 1.3vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* project images */

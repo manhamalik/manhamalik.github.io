@@ -471,7 +471,7 @@ updateProjects();
     });
   }, observerOptions);
 
-  const elementsToAnimate = document.querySelectorAll('.experience-container, .experience-text, .projects-heading, .projects-text, .search-wrapper, .community-container, .community-text');
+  const elementsToAnimate = document.querySelectorAll('.experience-container, .experience-text, .projects-heading, .projects-text, .search-wrapper, .certification-container, .community-container, .community-text');
 elementsToAnimate.forEach(element => {
   observer.observe(element);
 });
@@ -562,6 +562,98 @@ elementsToAnimate.forEach(element => {
       prevTranslate = -slideWidth * currentSlide; // Update previous translate for smooth dragging
     }
   }
+
+  // Certification carousel functionality
+const certificationTrack = document.querySelector('.carousel-certification-track');
+const certificationSlides = Array.from(certificationTrack.children);
+const nextCertificationButton = document.querySelector('.carousel-certification-button.next-button');
+const prevCertificationButton = document.querySelector('.carousel-certification-button.prev-button');
+
+let currentCertificationSlide = 0;
+let startCertificationX = 0;
+let currentCertificationTranslate = 0;
+let prevCertificationTranslate = 0;
+let isCertificationDragging = false;
+
+// Update slide position for the certification track
+function updateCertificationSlidePosition() {
+  const slideWidth = certificationSlides[0].getBoundingClientRect().width;
+  certificationTrack.style.transform = `translateX(${-slideWidth * currentCertificationSlide}px)`;
+}
+
+// Move to a specific certification slide
+function moveToCertificationSlide(slideIndex) {
+  // Wrap around if out of bounds
+  if (slideIndex < 0) {
+    currentCertificationSlide = certificationSlides.length - 1;
+  } else if (slideIndex >= certificationSlides.length) {
+    currentCertificationSlide = 0;
+  } else {
+    currentCertificationSlide = slideIndex;
+  }
+  updateCertificationSlidePosition();
+}
+
+// Click events for next and previous certification buttons
+nextCertificationButton.addEventListener('click', () => {
+  moveToCertificationSlide(currentCertificationSlide + 1);
+});
+
+prevCertificationButton.addEventListener('click', () => {
+  moveToCertificationSlide(currentCertificationSlide - 1);
+});
+
+// Responsive adjustment
+window.addEventListener('resize', updateCertificationSlidePosition);
+
+// Drag functionality for certification carousel (mouse and touch events)
+certificationTrack.addEventListener('mousedown', certificationDragStart);
+certificationTrack.addEventListener('touchstart', certificationDragStart);
+certificationTrack.addEventListener('mousemove', certificationDragMove);
+certificationTrack.addEventListener('touchmove', certificationDragMove);
+certificationTrack.addEventListener('mouseup', certificationDragEnd);
+certificationTrack.addEventListener('touchend', certificationDragEnd);
+certificationTrack.addEventListener('mouseleave', certificationDragEnd);
+
+function certificationDragStart(event) {
+  isCertificationDragging = true;
+  startCertificationX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+  currentCertificationTranslate = prevCertificationTranslate;
+  certificationTrack.classList.add('dragging');
+}
+
+function certificationDragMove(event) {
+  if (isCertificationDragging) {
+    const currentX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    const deltaX = currentX - startCertificationX;
+    currentCertificationTranslate = prevCertificationTranslate + deltaX;
+    certificationTrack.style.transform = `translateX(${currentCertificationTranslate}px)`;
+  }
+}
+
+function certificationDragEnd() {
+  if (isCertificationDragging) {
+    isCertificationDragging = false;
+    certificationTrack.classList.remove('dragging');
+
+    const slideWidth = certificationSlides[0].getBoundingClientRect().width;
+    const movedBy = currentCertificationTranslate - prevCertificationTranslate;
+
+    // Determine slide based on drag distance
+    if (movedBy < -100 && currentCertificationSlide < certificationSlides.length - 1) {
+      currentCertificationSlide++;
+    } else if (movedBy > 100 && currentCertificationSlide > 0) {
+      currentCertificationSlide--;
+    } else if (movedBy < -100 && currentCertificationSlide === certificationSlides.length - 1) {
+      currentCertificationSlide = 0;
+    } else if (movedBy > 100 && currentCertificationSlide === 0) {
+      currentCertificationSlide = certificationSlides.length - 1;
+    }
+
+    moveToCertificationSlide(currentCertificationSlide);
+    prevCertificationTranslate = -slideWidth * currentCertificationSlide;
+  }
+}
 
 // go up button
 const goUpButton = document.getElementById('goUpButton'); //reference to "Go Up" button
