@@ -431,14 +431,25 @@ moreProjectsButton.addEventListener('click', () => {
 });
 
 lessProjectsButton.addEventListener('click', () => {
-  // Reset to show the initial number of projects
+  // Reset the displayed projects count
   displayedProjects = projectsPerPage;
   updateProjects();
 
-  // Hide the "Less Projects" button after resetting
+  const projectsSection = document.getElementById('scrollToProjectsAnchor');
+  const navbarHeight = document.querySelector('header').offsetHeight;
+  const projectsPosition = projectsSection.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+  window.scrollTo({
+      top: projectsPosition,
+      behavior: 'auto'
+  });
+
+  // Toggle button visibility
   lessProjectsButton.style.display = 'none';
   moreProjectsButton.style.display = 'block';
 });
+
+
 
 // Initial projects update
 updateProjects();

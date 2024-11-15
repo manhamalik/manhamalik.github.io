@@ -376,8 +376,13 @@ img {
   border: none;
   padding: 0.5vw;
   cursor: pointer;
-  font-size: 1.5vw;
+  font-size: 2vw;
   z-index: 1;
+  transition: 0.3s ease;
+}
+
+.carousel-button:hover {
+  color: #37b0d0; 
 }
 
 .prev-button {
@@ -670,8 +675,13 @@ img {
   border: none;
   padding: 0.5vw;
   cursor: pointer;
-  font-size: 1.5vw;
+  font-size: 2vw;
   z-index: 1;
+  transition: 0.3s ease;
+}
+
+.carousel-certification-button:hover {
+  color: #37b0d0; 
 }
 
 .prev-button {
@@ -926,6 +936,12 @@ img {
   width: 3.9vw;
   height: 3.9vw;
 }
+
+.image-button:hover img {
+  filter: brightness(0.1); /* Darkens the image */
+  transition: filter 0.3s ease;
+}
+
 
 /* footer section*/
 footer {
