@@ -500,7 +500,7 @@ img {
 }
 
 .certificate-card:hover {
-  transform: translateY(-2%);
+  transform: translateY(-3%);
 }
 
 .certificate-logo {
@@ -628,7 +628,7 @@ img {
   font-family: Noto Sans Multani;
   text-align: center;
   font-size: 1.6vw;
-  margin-bottom: 3vw;
+  margin-bottom: 2vw;
   color: black;
 }
 
@@ -654,7 +654,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 20px;
+  gap: 1.35vw;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
