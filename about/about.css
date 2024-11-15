@@ -116,6 +116,18 @@ nav a.active {
   color: #37b0d0;
 }
 
+/* Hide community and certification in desktop view */
+.mobile-only {
+  display: none;
+}
+
+/* Show them only on mobile screens */
+@media screen and (max-width: 768px) {
+  .mobile-only {
+    display: inline-block;
+  }
+}
+
 .resume-button {
   background-color: #37b0d0;
   font-family: Rubik;
