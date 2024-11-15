@@ -130,24 +130,38 @@ function typeText(element, text, cursor, speed) {
   }, speed);
 }
 
-setTimeout(() => {
-  // Hide opening animation
+window.addEventListener('load', function () {
   const openingAnimation = document.querySelector(".opening-animation");
-  openingAnimation.style.display = "none";
-
-  // Show main content
   const mainContainer = document.querySelector(".main-container");
-  mainContainer.style.display = "flex";
+  let animationPlaying = true; // Ensure it stops only once
 
-  // Start typing animations
-  mainCursor.style.display = "inline-block";
-  typeText(mainElement, mainText, mainCursor, 100);
+  // Function to stop the opening animation
+  function stopOpeningAnimation() {
+    if (animationPlaying) {
+      animationPlaying = false;
 
-  setTimeout(() => {
-    secondCursor.style.display = "inline-block";
-    typeText(subElement, subText, secondCursor, subHeadingTypingSpeed);
-  }, mainText.length * 100);
-}, 2000); // the delay
+      // Hide the opening animation
+      openingAnimation.style.display = "none";
+
+      // Show the main content
+      mainContainer.style.display = "flex";
+
+      // Start typing animations
+      mainCursor.style.display = "inline-block";
+      typeText(mainElement, mainText, mainCursor, 100);
+
+      // Start the second text animation after the first one finishes
+      setTimeout(() => {
+        secondCursor.style.display = "inline-block";
+        typeText(subElement, subText, secondCursor, subHeadingTypingSpeed);
+      }, mainText.length * 100);
+    }
+  }
+
+  // Automatically stop animation after 2 seconds or when the user scrolls
+  setTimeout(stopOpeningAnimation, 2000); // Stops after the delay
+  window.addEventListener('scroll', stopOpeningAnimation); // Stops on scroll
+});
 
 // projects container
 const projects = [
