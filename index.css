@@ -496,7 +496,7 @@ img {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .certificate-card:hover {
@@ -822,7 +822,7 @@ img {
   display: flex;
   flex-direction: column; /* Stack child elements vertically */
   justify-content: center; /* Distribute space evenly between child elements */
-  transition: transform 0.3s; /* hover speed */
+  transition: transform 0.35s ease; /* hover speed */
   text-decoration: none; /* Remove underlines from links */
   cursor: pointer;
   color: black;
