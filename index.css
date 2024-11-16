@@ -1065,19 +1065,20 @@ header {
   align-items: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   width:29vw;
+  height:9vw;
   z-index: 1000;
   font-family: Noto Sans Multani;
 }
 
 .cookie-title {
   font-weight: bold;
-  font-size: 15.5px;
+  font-size: 1vw;
   color: white; /* Adjust color if needed */
   margin: 0; 
 }
 
 .cookie-text {
-  font-size: 15.5px;
+  font-size: 1vw;
   color: white;
   margin-top: 0.5vw;
   font-family: Noto Sans Multani;
@@ -1088,7 +1089,7 @@ header {
   color: black;
   border: none;
   padding: 5px 12px;
-  font-size: 15.5px;
+  font-size: 1vw;
   cursor: pointer;
   margin-top: 0vw;
   border-radius: 5px;
@@ -1111,7 +1112,7 @@ header {
 
 .cookie-icon {
   width: 7vw;
-  height: auto;
+  height: 7vw;
   transition: transform 0.3s ease;
 }
 
@@ -1256,7 +1257,7 @@ p a:hover {
   display: block;
   margin: 20px auto 0; /* Center the button */
   padding: 5px 12px;
-  font-size: 15.5px;
+  font-size: 1vw;
   background-color: white;
   color: black;
   border: none;
