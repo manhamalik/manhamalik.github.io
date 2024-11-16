@@ -1681,7 +1681,7 @@ p a:hover {
   }
 
   .community-points {
-    font-size: 2.25vw;
+    font-size: 2vw;
   }
 
   /* Certification section */
@@ -1757,7 +1757,7 @@ p a:hover {
     display: flex;
     align-items: center;
     width: 90%;
-    height: 30vw;
+    height: auto;
   }
 
   .cookie-title {
@@ -1819,6 +1819,7 @@ p a:hover {
     cursor: pointer;
     color: white;
   }
+
   .close-button {
     font-size: 18px;
   }
