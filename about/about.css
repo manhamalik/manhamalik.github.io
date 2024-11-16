@@ -20,6 +20,7 @@ body {
 
 #saylor-link {
   color: #2cbad9;
+  transition: transform 0.3s ease;
 }
 
 #saylor-link:hover {

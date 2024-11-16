@@ -475,7 +475,7 @@ img[src="images/art.png"]:hover {
   display: block;
   width: 11vw;
   margin-right: 1.5vw; /* Space between image and text content */
-  border-radius: 25px;
+  border-radius: 2.5vw;
   flex-shrink: 0; 
 }
 
