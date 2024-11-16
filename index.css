@@ -22,7 +22,6 @@ body {
   display: none;
 }
 
-
 header {
   font-family: Quicksand;
   background-color: black;
@@ -212,10 +211,15 @@ nav a.active {
   animation: blink-caret 0.75s step-end infinite;
 }
 
-img {
+img[src="images/art.png"] {
   width: 27.3vw;
   height: auto;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+img[src="images/art.png"]:hover {
+  transform: rotate(5deg);
 }
 
 @keyframes blink-caret {
@@ -273,7 +277,7 @@ img {
   width: calc(30.9vw);
   box-sizing: border-box;
   position: relative;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .experience-box:hover {
@@ -787,7 +791,7 @@ img {
   border: 0.2vw solid grey;
   width: 100%;
   margin-right: 0.75vw;
-  text-align: center;
+  text-align: left;
   font-family: Noto Sans Multani;
   font-size: 1.03vw;
   position: relative;
@@ -1090,6 +1094,7 @@ header {
   border-radius: 5px;
   font-family: Noto Sans Multani;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .cookie-button:hover {
@@ -1104,10 +1109,14 @@ header {
   background-color: #777;
 }
 
-
 .cookie-icon {
   width: 7vw;
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.cookie-icon:hover {
+  transform: rotate(5deg);
 }
 
 /* Cookie Banner Close Icon */
@@ -1118,6 +1127,7 @@ header {
   font-size: 20px;
   cursor: pointer;
   color: white;
+  transition: transform 0.3s ease;
 }
 
 .close-banner:hover {
@@ -1170,6 +1180,7 @@ header {
 .modal-content::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 10px; /* Roundness of the scrollbar thumb */
+  transition: transform 0.3s ease;
 }
 
 .modal-content::-webkit-scrollbar-thumb:hover {
@@ -1235,6 +1246,7 @@ p a:hover {
   font-size: 20px;
   cursor: pointer;
   color: white;
+  transition: transform 0.3s ease;
 }
 .close-modal:hover {
   color: rgb(180, 176, 176);
@@ -1252,6 +1264,7 @@ p a:hover {
   cursor: pointer;
   font-family: Noto Sans Multani;
   font-weight: bold;
+  transition: transform 0.3s ease;
 }
 
 .close-button:hover {
@@ -1267,7 +1280,7 @@ p a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    /* width: 100vw; */
+    width: 100vw;
     height: 0;
     justify-content: center;
     align-items: center;
@@ -1656,7 +1669,7 @@ p a:hover {
   }
 
   .community-box h3 {
-    font-size: 3.75vw;
+    font-size: 3.5vw;
   }
 
   .community-company-role {
@@ -1744,22 +1757,21 @@ p a:hover {
     display: flex;
     align-items: center;
     width: 90%;
-    height: 18%;
-}
-
+    height: 30vw;
+  }
 
   .cookie-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .cookie-text {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 2vw;
   }
 
   .cookie-button {
     padding: 5px 12px;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .cookie-icon {
