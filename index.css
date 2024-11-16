@@ -1656,11 +1656,11 @@ p a:hover {
   }
 
   .community-box h3 {
-    font-size: 4vw;
+    font-size: 3.75vw;
   }
 
   .community-company-role {
-    font-size: 3.5vw;
+    font-size: 3.25vw;
   }
 
   .community-date {
@@ -1668,7 +1668,7 @@ p a:hover {
   }
 
   .community-points {
-    font-size: 2.5vw;
+    font-size: 2.25vw;
   }
 
   /* Certification section */
