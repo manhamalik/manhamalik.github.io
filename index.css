@@ -550,7 +550,7 @@ img[src="images/art.png"]:hover {
 }
 
 .certificate-title {
-  font-size: 1.27em;
+  font-size: 1.323vw;
   font-weight: bold;
   color: black;
   margin: 16px 0 12px;
@@ -567,9 +567,9 @@ img[src="images/art.png"]:hover {
 
 .tag {
   background-color: #F0ECEC;
-  border-radius: 16px;
+  border-radius: 1vw;
   padding: 4px 8px;
-  font-size: 1em;
+  font-size: 1.04vw;
   color: black;
 }
 
@@ -583,7 +583,7 @@ img[src="images/art.png"]:hover {
 }
 
 .certificate-date {
-  font-size: 1em;
+  font-size: 1.04vw;
   color: #777;
   margin: 0;
 }
@@ -1114,6 +1114,7 @@ header {
   width: 7vw;
   height: 7vw;
   transition: transform 0.3s ease;
+  margin-left:0.25vw;
 }
 
 .cookie-icon:hover {
