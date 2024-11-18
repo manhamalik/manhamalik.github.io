@@ -117,7 +117,7 @@ const secondCursor = document.getElementById("second-cursor");
 
 const subHeadingTypingSpeed = 52;
 
-function typeText(element, text, cursor, speed) {
+function typeText(element, text, cursor, speed, callback) {
   let index = 0;
   const typingInterval = setInterval(() => {
     element.textContent = text.slice(0, index);
@@ -126,6 +126,7 @@ function typeText(element, text, cursor, speed) {
     if (index > text.length) {
       clearInterval(typingInterval);
       cursor.style.display = "none";
+      if (callback) callback();
     }
   }, speed);
 }
@@ -140,33 +141,30 @@ window.addEventListener('load', function () {
   function stopOpeningAnimation() {
     if (animationPlaying) {
       animationPlaying = false;
-
+  
       // Hide the opening animation
       openingAnimation.style.display = "none";
-
+  
       // Show the main content
       mainContainer.style.display = "flex";
-
-      // Show the cookie banner
-      cookieBanner.style.display = "flex";
-
+  
       // Start typing animations
       mainCursor.style.display = "inline-block";
-      typeText(mainElement, mainText, mainCursor, 100);
-
-      // Start the second text animation after the first one finishes
-      setTimeout(() => {
+      typeText(mainElement, mainText, mainCursor, 100, () => {
+        // Start the second text animation after the first one finishes
         secondCursor.style.display = "inline-block";
-        typeText(subElement, subText, secondCursor, subHeadingTypingSpeed);
-      }, mainText.length * 100);
+        typeText(subElement, subText, secondCursor, subHeadingTypingSpeed, () => {
+          // Show the cookie banner after the second animation is complete
+          cookieBanner.style.display = "flex";
+        });
+      });
     }
-  }
+  }  
 
   // Automatically stop animation after 2 seconds or when the user scrolls
   setTimeout(stopOpeningAnimation, 2000); // Stops after the delay
   window.addEventListener('scroll', stopOpeningAnimation); // Stops on scroll
 });
-
 
 // projects container
 const projects = [
