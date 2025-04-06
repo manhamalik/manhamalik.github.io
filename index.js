@@ -92,7 +92,7 @@ links.forEach(link => {
 });
 
 // resume link variable
-const resumeLink = "https://drive.google.com/file/d/1D3OVY26GyRY0vB_O5ef_qHy2QTKZ1RZ5/view?usp=sharing";
+const resumeLink = "https://drive.google.com/file/d/1l3gn8x5kT0ORxwxsFzGnhpsR6h1hwFJT/view?usp=sharing";
 
 // Function to update all resume links
 function updateResumeLinks() {
