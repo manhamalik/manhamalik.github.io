@@ -331,7 +331,7 @@ const projects = [
     image: 'images/projects/esg2.png',
     link: 'https://data-minds.vercel.app/',
     githubLink: 'https://github.com/zakirangwala/DataMinds',
-    tags: ['Python', 'React', 'PostgreSQL', 'Selenium', 'Gemini API'],
+    tags: ['Python', 'React', 'PostgreSQL', 'Supabase', 'Selenium', 'Gemini API'],
     description: '● Built a real‑time ESG risk rating platform for 200+ Canadian companies using Python, PostgreSQL, React, and Selenium.\n● Engineered an automated pipeline processing 10,000+ monthly data points (reports, news, filings) via Gemini API and NLP.\n● Analyzed 30+ core ESG indicators to generate risk scores and dashboard visuals to support informed investor decisions.',
     featured: true
   },  
