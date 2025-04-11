@@ -1,3 +1,5 @@
+import { resumeLink } from './resumeLink.js';
+
 window.addEventListener('load', function() {
   // Get the navbar height to use for scroll offset
   const navbarHeight = document.querySelector('header').offsetHeight;
@@ -90,9 +92,6 @@ links.forEach(link => {
     icon.classList.remove('fa-times');
   });
 });
-
-// resume link variable
-const resumeLink = "https://drive.google.com/file/d/1l3gn8x5kT0ORxwxsFzGnhpsR6h1hwFJT/view?usp=sharing";
 
 // Function to update all resume links
 function updateResumeLinks() {
@@ -199,7 +198,7 @@ const projects = [
     githubLink: 'https://github.com/manhamalik/manhamalik.github.io',
     tags: ['JavaScript', 'HTML', 'CSS', 'Figma'],
     description: '● Developed a responsive portfolio website with JavaScript, HTML, and CSS, featuring dynamic animations, interactive project galleries, and seamless navigation.\n● Designed and prototyped the user interface in Figma, ensuring an intuitive user experience across devices with smooth transitions and easy access to key information.',
-    featured: true
+    // featured: true
   },
   {
     title: 'Discover Lincoln',
@@ -208,7 +207,7 @@ const projects = [
     githubLink: 'https://github.com/manhamalik/DiscoverLincolnCode',
     tags: ['JavaScript', 'HTML', 'CSS', 'React', 'Figma', 'Next.js', 'Strapi CMS', 'Leaflet.js', 'Node.js'],
     description: '● Built a tourism platform with interactive maps, user authentication, and Strapi CMS, using Figma for design and prototyping.\n● Developed LincolnGuessr, inspired by GeoGuessr, allowing users to explore the Town of Lincoln’s landmarks through a gamified map experience with Leaflet.js.',
-    featured:true
+    // featured:true
   },
   {
     title: 'FlappyBird',
@@ -283,24 +282,59 @@ const projects = [
     tags: ['JavaScript', 'HTML', 'CSS', 'React.js', 'Node.js', 'JSON', 'AJAX', 'REST API'],
     description: '● Developed a dynamic web application providing real-time weather insights tailored to user-specified locations.\n● Built with JavaScript, ReactJS, NodeJS, and REST API for seamless user experience and weather data retrieval.'
   },
-  {
-    title: 'BrainTumourDetectionAI',
-    image: 'images/projects/bttd.png',
-    link: 'https://manhamalik.com/BrainTumourDetectionAI/',
-    githubLink: 'https://github.com/manhamalik/Brain_Tumour_Detection_AI',
-    tags: ['Python', 'TensorFlow', 'Keras', 'NumPy', 'Pandas', 'Matplotlib', 'OpenCV', 'Google Colab', 'Gradio'],
-    description: '● Developed and trained convolutional neural network (CNN) models using Python, TensorFlow, and Keras for brain tumour detection from MRI scans, achieving up to 99% accuracy.\n● Leveraged transfer learning with pre-trained models (VGG16, InceptionV3, ResNet50) and integrated Gradio to create a real-time testing interface, enhancing deployment and accessibility across diverse datasets.', 
-    featured: true
-  },
+  // {
+  //   title: 'BrainTumourDetectionAI',
+  //   image: 'images/projects/bttd.png',
+  //   link: 'https://manhamalik.com/BrainTumourDetectionAI/',
+  //   githubLink: 'https://github.com/manhamalik/Brain_Tumour_Detection_AI',
+  //   tags: ['Python', 'TensorFlow', 'Keras', 'NumPy', 'Pandas', 'Matplotlib', 'OpenCV', 'Google Colab', 'Gradio'],
+  //   description: '● Developed and trained convolutional neural network (CNN) models using Python, TensorFlow, and Keras for brain tumour detection from MRI scans, achieving up to 99% accuracy.\n● Leveraged transfer learning with pre-trained models (VGG16, InceptionV3, ResNet50) and integrated Gradio to create a real-time testing interface, enhancing deployment and accessibility across diverse datasets.', 
+  // },
   {
     title: 'AutoRentNexus',
     image: 'images/projects/arnv.png',
     link: 'https://manhamalik.com/AutoRentNexus/',
     githubLink: 'https://github.com/manhamalik/AutoRentNexusCode',
     tags: ['Java', 'JUnit', 'Maven', 'Lucidchart'],
-    description: '● Developed a Java-based car rental management system that automates vehicle management, bookings, and customer profiles, enhancing operational efficiency for rental agencies.\n● Implemented real-time vehicle availability tracking and cost calculation algorithms; integrated JUnit for automated testing and Maven for build automation to ensure reliability and maintainability.', 
-    featured: true
+    description: '● Developed a Java-based car rental management system that automates vehicle management, bookings, and customer profiles, enhancing operational efficiency for rental agencies.\n● Implemented real-time vehicle availability tracking and cost calculation algorithms; integrated JUnit for automated testing and Maven for build automation to ensure reliability and maintainability.',
+    // featured: true
   },
+  {
+    title: 'SUS Contracting',
+    image: 'images/projects/sc.png',
+    link: 'https://suscontractinginc.com/',
+    githubLink: 'https://github.com/manhamalik/SUSContracting',
+    tags: ['JavaScript', 'React', 'Node.js', 'Strapi CMS', 'Tailwind CSS', 'Google Reviews API', 'Figma'],
+    description: '● Built a full-stack web platform for contracting services using JavaScript, React, Node.js, Strapi CMS, and Tailwind CSS.\n● Developed core features like e-commerce and a job board, and optimized SEO to 100%, ranking first on Google.\n● Integrated Google Reviews API to showcase real-time feedback, increasing trust and user engagement by 15%.',
+    featured: true
+  },  
+  {
+    title: 'LARelief',
+    image: 'images/projects/lar.png',
+    link: 'https://larelief.onrender.com/',
+    githubLink: 'https://github.com/manhamalik/LARelief',
+    tags: ['Java', 'Spring Boot', 'PostgreSQL', 'React', 'Next.js', 'Docker', 'Leaflet.js', 'REST APIs', 'OpenWeather API', 'CalFire API', 'LibreTranslate API', 'Figma'],
+    description: '● Built a full-stack wildfire relief platform for 1,000+ users using Java, Spring Boot, PostgreSQL, React, Next.js, and Docker.\n● Developed real-time wildfire and air quality mapping with Leaflet.js, OpenWeather, and CalFire APIs for geo-tracking.\n● Integrated REST APIs, CI/CD pipelines with GitHub Workflows, and multilingual support via LibreTranslate API.',
+    featured: true
+  }, 
+  {
+    title: 'MediMap AI',
+    image: 'images/projects/mma.png',
+    link: 'https://medimap-ai.vercel.app/',
+    githubLink: 'https://github.com/manhamalik/MediMapAI',
+    tags: ['Python', 'React', 'PyTorch', 'TensorFlow', 'Keras', 'scikit-learn', 'FastAPI', 'REST APIs', 'OpenAI API', 'Firebase', 'Firestore', 'Hugging Face Spaces', 'Figma'],
+    description: '● Built a 99% accurate MRI-based brain tumor detector with Python, React, PyTorch, TensorFlow, Keras, and scikit-learn.\n● Deployed a multi-model AI pipeline for detection, classification, and segmentation via FastAPI on Hugging Face Spaces.\n● Engineered user auth, symptom tracking, and NLP-powered reports with Firebase, Firestore, and OpenAI\'s Python SDK.',
+    featured: true
+  },    
+  {
+    title: 'EnviroVest',
+    image: 'images/projects/esg2.png',
+    link: 'https://data-minds.vercel.app/',
+    githubLink: 'https://github.com/zakirangwala/DataMinds',
+    tags: ['Python', 'React', 'PostgreSQL', 'Selenium', 'Gemini API'],
+    description: '● Built a real‑time ESG risk rating platform for 200+ Canadian companies using Python, PostgreSQL, React, and Selenium.\n● Engineered an automated pipeline processing 10,000+ monthly data points (reports, news, filings) via Gemini API and NLP.\n● Analyzed 30+ core ESG indicators to generate risk scores and dashboard visuals to support informed investor decisions.',
+    featured: true
+  },  
 ];
 
 const searchBar = document.getElementById('searchBar');

@@ -1,3 +1,5 @@
+import { resumeLink } from '../resumeLink.js';
+
 // Hamburger and dropdown menu handling
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
@@ -69,9 +71,6 @@ links.forEach(link => {
     }
   });
 });
-
-// resume link variable
-const resumeLink = "https://drive.google.com/file/d/1l3gn8x5kT0ORxwxsFzGnhpsR6h1hwFJT/view?usp=sharing";
 
 // Function to update all resume links
 function updateResumeLinks() {
