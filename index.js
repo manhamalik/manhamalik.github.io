@@ -314,7 +314,7 @@ const projects = [
     link: 'https://larelief.onrender.com/',
     githubLink: 'https://github.com/manhamalik/LARelief',
     tags: ['Java', 'Spring Boot', 'PostgreSQL', 'React', 'Next.js', 'Docker', 'Leaflet.js', 'REST APIs', 'OpenWeather API', 'CalFire API', 'LibreTranslate API', 'Figma'],
-    description: '● Built a full-stack wildfire relief platform for 1,000+ users using Java, Spring Boot, PostgreSQL, React, Next.js, and Docker.\n● Developed real-time wildfire and air quality mapping with Leaflet.js, OpenWeather, and CalFire APIs for geo-tracking.\n● Integrated REST APIs, CI/CD pipelines with GitHub Workflows, and multilingual support via LibreTranslate API.',
+    description: '● Built a full-stack wildfire relief platform for 1,000+ users using Java, Spring Boot, PostgreSQL, React, Next.js, and Docker.\n● Developed real-time wildfire and air quality mapping via Leaflet.js, OpenWeather, and CalFire REST APIs for geo-tracking.\n● Integrated CI/CD pipelines with GitHub Workflows, and multilingual support using LibreTranslate API.',
     featured: true
   }, 
   {
@@ -329,8 +329,8 @@ const projects = [
   {
     title: 'EnviroVest',
     image: 'images/projects/esg2.png',
-    link: 'https://data-minds.vercel.app/',
-    githubLink: 'https://github.com/zakirangwala/DataMinds',
+    link: 'https://enviro-vest.vercel.app/',
+    githubLink: 'https://github.com/manhamalik/EnviroVest',
     tags: ['Python', 'React', 'PostgreSQL', 'Supabase', 'Selenium', 'Gemini API'],
     description: '● Built a real‑time ESG risk rating platform for 200+ Canadian companies using Python, PostgreSQL, React, and Selenium.\n● Engineered an automated pipeline processing 10,000+ monthly data points (reports, news, filings) via Gemini API and NLP.\n● Analyzed 30+ core ESG indicators to generate risk scores and dashboard visuals to support informed investor decisions.',
     featured: true
